@@ -45,6 +45,13 @@ a:hover { color: var(--orange); }
 hr { border: 0; border-top: 2px dashed rgba(33,24,15,.25); margin: 30px 0; }
 .en { color: var(--muted); font-size: 14px; }
 footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 13px; }
+footer p { margin: 0 0 6px; }
+footer p:last-child { margin-bottom: 0; }
+.site-name { font-weight: 800; color: var(--ink); }
+.beian { display: flex; flex-wrap: wrap; gap: 4px 10px; justify-content: center; }
+.beian a { color: var(--muted); text-decoration: none; }
+.beian a:hover { color: var(--orange); text-decoration: underline; }
+
 code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size: .92em; }
 @media (max-width: 480px) {
   .wrap { padding: 28px 14px 56px; }
@@ -76,8 +83,8 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     </ul>
     <p>全部存在这台设备的本地存储（iOS 沙盒）里。不气了自己不上传、不同步、不另外备份。</p>
 
-    <h2>一个要说清楚的例外</h2>
-    <p>如果你开启了 iPhone 的整机备份（iCloud 或电脑备份），系统会把 App 的数据一起备走。这是 iOS 的行为，不经过不气了，不气了也读不到备份内容。介意的话，可以在系统「设置 → Apple 账户 → iCloud → 管理账户储存空间」里关掉不气了的备份。</p>
+    <h2>备份</h2>
+    <p>不气了给自己的存储目录打了「不进备份」的标记，所以 iPhone 的整机备份（iCloud 或电脑备份）不会把这些记录带走。换手机、从备份恢复，它们都不会跟过去；不气了自己也没有留副本。</p>
 
     <h2>不碰的东西</h2>
     <p>不读通讯录，不读相册，不读你的聊天记录，不申请定位，不使用麦克风或摄像头。你写下的话只显示给你自己看。不气了没有发送、分享或转发功能，任何一句都不会被替你发出去。</p>
@@ -102,11 +109,24 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 
     <hr>
 
-    <h2 class="en">English summary</h2>
-    <p class="en">Unmad (不气了) collects no data. The app has no server, no account, and makes no network requests whatsoever. Everything you write or do — rescue history, held drafts, preferences — is stored only in the app's local sandbox on your device and is deleted when you delete the app. The app does not access contacts, photos, location, microphone, or camera, and it has no sending, sharing, or messaging capability. The only exception worth naming is a full iPhone backup (iCloud or computer), which is performed by iOS itself and never passes through Unmad. Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
+    <h2 class="en">English</h2>
+    <p class="en">A full English version of this policy is at <a href="en/privacy.html">unmad-site/en/privacy.html</a>.</p>
+    <p class="en">Unmad (不气了) collects no data. The app has no server, no account, and makes no network requests whatsoever. Everything you write or do — rescue history, held drafts, preferences — is stored only in the app's local sandbox on your device and is deleted when you delete the app. The app does not access contacts, photos, location, microphone, or camera, and it has no sending, sharing, or messaging capability. The app marks its own storage as excluded from backup, so a full iPhone backup (iCloud or computer) does not carry this data either. Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
   </main>
 
-  <footer>© 2026 Yuan Zhao · <a href="support.html">支持页面</a></footer>
+  <footer>
+    <p><a href="index.html">不气了 Unmad</a> · <a href="support.html">支持页面</a> · <a href="en/privacy.html">English</a></p>
+    <p>联系：<a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></p>
+    <!-- 备案号下发后，删掉本段注释的开头标记与结尾标记，让下面这段显示出来。
+         占位换成工信部查询系统里【复制】的真实号码，不要手打（全角半角会导致比对失败）。
+         备案号未下发前不得展示，展示未获批的号码属于违规。
+    <p class="beian">
+      <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">▢▢ICP备▢▢▢▢▢▢▢▢号-1</a>
+      <a href="https://beian.mps.gov.cn" target="_blank" rel="noopener">▢公网安备 ▢▢▢▢▢▢▢▢▢▢▢▢▢▢号</a>
+    </p>
+    -->
+    <p>© 2026 Yuan Zhao</p>
+  </footer>
 </div>
 </body>
 </html>
