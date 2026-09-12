@@ -3,7 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>不气了 Unmad</title>
+<title>不气了 Unmad · 生气的时候打开</title>
+<meta name="description" content="不气了是一个中文的情绪急救小工具。不劝你冷静，用 30 到 90 秒把你从气头上捞回来，然后关掉它去过日子。不联网、不要账号、不上传任何东西。">
+<link rel="canonical" href="https://unmad.cn/">
+<link rel="alternate" hreflang="zh-Hans" href="https://unmad.cn/">
+<link rel="alternate" hreflang="en" href="https://unmad.cn/en/">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FFF4DD">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="不气了 Unmad">
+<meta property="og:title" content="不气了 Unmad · 生气的时候打开">
+<meta property="og:description" content="不劝你冷静，砸它骂它扔了它，30 秒把火撒完。不联网、不要账号、不上传任何东西。">
+<meta property="og:url" content="https://unmad.cn/">
+<meta property="og:image" content="https://unmad.cn/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
 <style>
 :root {
   --cream: #FFF4DD;
@@ -11,7 +27,11 @@
   --ink: #21180F;
   --muted: #6B5B48;
   --orange: #FF9D2E;
+  --red: #EF4136;
+  --yellow: #FFD84D;
+  --lilac: #C3B0F5;
   --line: #21180F;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 body {
@@ -22,66 +42,306 @@ body {
         "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
-.wrap { max-width: 680px; margin: 0 auto; padding: 40px 20px 72px; }
-header { margin-bottom: 32px; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--red); }
+.wrap { max-width: 960px; margin: 0 auto; padding: 24px 20px 72px; }
+
+/* ---------- 顶栏 ---------- */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px; margin-bottom: 44px;
+}
 .mark {
   display: inline-block; padding: 6px 14px; border: 2.5px solid var(--line);
   border-radius: 999px; background: var(--orange); font-weight: 800; letter-spacing: .02em;
-  box-shadow: 3px 3px 0 var(--line);
+  box-shadow: 3px 3px 0 var(--line); text-decoration: none;
 }
-h1 { font-size: 28px; font-weight: 800; margin: 24px 0 6px; letter-spacing: -.01em; }
-.sub { color: var(--muted); margin: 0; font-size: 14px; }
-main {
+.mark:hover { color: var(--ink); }
+.topbar nav { display: flex; gap: 18px; font-size: 14px; }
+.topbar nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+.topbar nav a:hover { color: var(--red); text-decoration: underline; }
+
+/* ---------- 首屏 ---------- */
+.hero { display: grid; gap: 34px; align-items: center; margin-bottom: 72px; }
+.kicker {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: .08em;
+  color: var(--red); text-transform: uppercase;
+}
+h1 {
+  font-size: 40px; line-height: 1.25; font-weight: 800; margin: 0 0 16px;
+  letter-spacing: -.01em;
+}
+.lede { font-size: 17px; margin: 0 0 24px; }
+.lede b { font-weight: 800; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+/* App Store 上线后：把下面这个 <span class="store"> 换成
+   <a class="store" href="https://apps.apple.com/cn/app/idXXXXXXXXXX">App Store 下载</a>
+   样式一样，a 会自动变成可点的按钮。 */
+.store {
+  display: inline-block; padding: 12px 24px; border: 2.5px solid var(--line);
+  border-radius: 999px; background: var(--yellow); font-weight: 800; font-size: 16px;
+  box-shadow: 4px 4px 0 var(--line); text-decoration: none;
+}
+a.store:hover { background: var(--orange); color: var(--ink); transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--line); }
+.cta-note { font-size: 13px; color: var(--muted); }
+.shot {
+  margin: 0; border: 3px solid var(--line); border-radius: 30px; overflow: hidden;
+  box-shadow: 8px 8px 0 var(--line); background: var(--cream); line-height: 0;
+  justify-self: center; max-width: 300px;
+}
+/* 网格子项默认 min-width:auto，截图那 480px 的固有宽度会把整页撑到视口以外，
+   手机上就变成整页横向溢出、右边文字被切掉。这两行是那个的解药，别删。 */
+.hero > *, .feature > * { min-width: 0; }
+.shot img { width: 100%; }
+
+/* ---------- 通用区块 ---------- */
+section { margin-bottom: 72px; }
+h2 { font-size: 26px; font-weight: 800; margin: 0 0 10px; letter-spacing: -.01em; }
+.section-sub { color: var(--muted); margin: 0 0 26px; max-width: 640px; }
+.grid3 { display: grid; gap: 18px; grid-template-columns: 1fr; }
+.card {
   background: var(--paper); border: 2.5px solid var(--line); border-radius: 18px;
-  padding: 28px 24px; box-shadow: 5px 5px 0 var(--line);
+  padding: 22px 22px 20px; box-shadow: 5px 5px 0 var(--line);
 }
-h2 { font-size: 18px; font-weight: 800; margin: 30px 0 8px; }
-h2:first-child { margin-top: 0; }
-p { margin: 0 0 14px; }
-ul { margin: 0 0 14px; padding-left: 22px; }
-li { margin-bottom: 6px; }
-a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-a:hover { color: var(--orange); }
-hr { border: 0; border-top: 2px dashed rgba(33,24,15,.25); margin: 30px 0; }
-.en { color: var(--muted); font-size: 14px; }
-footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 13px; }
+.card h3 { margin: 0 0 6px; font-size: 19px; font-weight: 800; }
+.card .who { margin: 0 0 12px; font-size: 13px; color: var(--muted); }
+.card ul { margin: 0; padding-left: 20px; }
+.card li { margin-bottom: 4px; }
+
+/* ---------- 图文行 ---------- */
+.feature { display: grid; gap: 28px; align-items: center; margin-bottom: 56px; }
+.feature h3 { font-size: 22px; font-weight: 800; margin: 0 0 10px; }
+.feature p { margin: 0 0 12px; }
+.feature p:last-child { margin-bottom: 0; }
+.tag {
+  display: inline-block; margin-bottom: 12px; padding: 3px 12px; font-size: 12px;
+  font-weight: 800; letter-spacing: .04em; border: 2px solid var(--line);
+  border-radius: 999px; background: var(--lilac);
+}
+.tag.t-note { background: var(--yellow); }
+.tag.t-cal { background: var(--orange); }
+.tag.t-comfort { background: #A8E6CF; }
+
+/* ---------- 隐私 ---------- */
+.privacy-block {
+  background: var(--ink); color: var(--cream); border-radius: 22px;
+  padding: 34px 30px; border: 2.5px solid var(--line); box-shadow: 6px 6px 0 var(--orange);
+}
+.privacy-block h2 { color: var(--paper); }
+.privacy-block p { color: #E8DCC6; }
+.privacy-block ul { margin: 0 0 18px; padding-left: 20px; color: #E8DCC6; }
+.privacy-block li { margin-bottom: 6px; }
+.privacy-block li b { color: var(--paper); }
+.privacy-block a { color: var(--orange); }
+.privacy-block a:hover { color: var(--yellow); }
+
+/* ---------- 常见问题 ---------- */
+.qa { border-top: 2px dashed rgba(33,24,15,.25); padding-top: 16px; margin-top: 16px; }
+.qa:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.qa h3 { font-size: 17px; font-weight: 800; margin: 0 0 4px; }
+.qa p { margin: 0; color: var(--muted); }
+
+/* ---------- 说明与页脚 ---------- */
+.disclaimer {
+  background: var(--paper); border: 2.5px dashed var(--line); border-radius: 18px;
+  padding: 22px; font-size: 14px; color: var(--muted);
+}
+.disclaimer b { color: var(--ink); }
+footer { text-align: center; color: var(--muted); font-size: 13px; }
 footer p { margin: 0 0 6px; }
 footer p:last-child { margin-bottom: 0; }
 .site-name { font-weight: 800; color: var(--ink); }
+.footer-links { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center; margin-bottom: 10px; }
 .beian { display: flex; flex-wrap: wrap; gap: 4px 10px; justify-content: center; }
 .beian a { color: var(--muted); text-decoration: none; }
-.beian a:hover { color: var(--orange); text-decoration: underline; }
+.beian a:hover { color: var(--red); text-decoration: underline; }
 
-code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size: .92em; }
+@media (min-width: 820px) {
+  .wrap { padding: 28px 24px 80px; }
+  h1 { font-size: 52px; }
+  .hero { grid-template-columns: 1.15fr .85fr; gap: 48px; }
+  .shot { max-width: 320px; }
+  .grid3 { grid-template-columns: repeat(3, 1fr); }
+  .feature { grid-template-columns: 320px 1fr; gap: 44px; }
+  .feature.alt { grid-template-columns: 1fr 320px; }
+  .feature.alt .shot { order: 2; }
+}
 @media (max-width: 480px) {
-  .wrap { padding: 28px 14px 56px; }
-  main { padding: 22px 18px; box-shadow: 4px 4px 0 var(--line); }
-  h1 { font-size: 24px; }
+  .wrap { padding: 20px 14px 56px; }
+  h1 { font-size: 32px; }
+  .card, .privacy-block { box-shadow: 4px 4px 0 var(--line); }
+  .privacy-block { padding: 26px 20px; }
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <span class="mark">不气了 · Unmad</span>
-    <h1>他TMD又双叒惹我生气！！！</h1>
-    <p class="sub">30 到 90 秒把自己从坏情绪里捞回来，然后关掉它去过日子。</p>
+
+  <header class="topbar">
+    <a class="mark" href="index.html">不气了 · Unmad</a>
+    <nav>
+      <a href="support.html">使用与支持</a>
+      <a href="privacy.html">隐私政策</a>
+      <a href="en/index.html" hreflang="en" lang="en">English</a>
+    </nav>
   </header>
 
-  <main>
-    <p>不气了是一个中文的情绪急救小工具。生气的时候不讲大道理，先用小游戏、荒谬互动和注意力转移，把你从气头上拉出来。</p>
-    <ul>
-      <li>九个消气活动：切掉烦恼、砸碎这破事、怒气泡泡、扔掉这个念头、脑子换个台、找找看、整理一下、敲木鱼、我要被哄</li>
-      <li>写下来：气头上想说的话写给自己，存进日历以后能翻回来；本来要发给谁的，还能顺手设个冷静时间</li>
-      <li>消气日历：记的是你把自己拉回来了几次，不是你生了几次气</li>
-      <li>不联网、不要账号、不上传任何东西</li>
-    </ul>
-    <p><a href="privacy.html">隐私政策</a> · <a href="support.html">使用与支持</a></p>
-    <p class="en"><a href="en/index.html">English</a></p>
-  </main>
+  <section class="hero">
+    <div>
+      <p class="kicker">30–90 秒 · 离开暴躁现场</p>
+      <h1>他TMD又双叒<br>惹我生气！！！</h1>
+      <p class="lede">生气的时候，没人想听大道理。<b>不气了</b>不劝你「冷静一点」，也不让你写感恩日记。它只做一件事：用 30 到 90 秒把你从气头上捞回来，然后让你关掉它，回去过日子。</p>
+      <div class="cta">
+        <span class="store">App Store · 即将上线</span>
+        <span class="cta-note">免费 · 无内购 · 不联网 · 不要账号</span>
+      </div>
+    </div>
+    <figure class="shot">
+      <img src="assets/shot-home.png" width="480" height="1043" alt="不气了首页：一句「他TMD又双叒惹我生气」，下面是「我真的气死了」「写下来」两个按钮">
+    </figure>
+  </section>
+
+  <section id="ways">
+    <h2>三种走法，看你现在是哪种气</h2>
+    <p class="section-sub">先报个数「现在有多气」，剩下的它替你排。玩完再报一次，它按你当下的状态接着推，不会把你锁在一条固定流程里。</p>
+    <div class="grid3">
+      <article class="card">
+        <h3>我想发泄</h3>
+        <p class="who">手上得有点动作才行</p>
+        <ul>
+          <li>切掉烦恼</li>
+          <li>砸碎这破事</li>
+          <li>怒气泡泡</li>
+          <li>扔掉这个念头</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>别让我想了</h3>
+        <p class="who">越想越气，先把脑子占住</p>
+        <ul>
+          <li>脑子换个台</li>
+          <li>找找看</li>
+          <li>整理一下</li>
+          <li>敲木鱼</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>哄哄我</h3>
+        <p class="who">这会儿只想有人站你这边</p>
+        <ul>
+          <li>给我蹦迪</li>
+          <li>娘娘息怒</li>
+          <li>不值得 / 管他呢</li>
+          <li>发疯模式</li>
+          <li>我现在谁都不想听</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2>它具体是怎么把你捞回来的</h2>
+    <p class="section-sub">没有测评，没有课程，没有「今天你感恩了吗」。就是几件很小、很蠢、很解气的事。</p>
+
+    <div class="feature">
+      <figure class="shot">
+        <img src="assets/shot-smash.png" width="480" height="1043" loading="lazy" alt="砸碎这破事：一块写着烦心事的板子已经裂开">
+      </figure>
+      <div>
+        <span class="tag">砸碎这破事</span>
+        <h3>写下来，然后把它砸了</h3>
+        <p>把烦你的那件事写下来，它变成一块板子。点是普通一击，按住再松是蓄力砸。裂纹从你手指落下的那个点长出来，砸到最后整句话炸开。</p>
+        <p>已碎，概不维修。</p>
+      </div>
+    </div>
+
+    <div class="feature alt">
+      <div>
+        <span class="tag t-note">写下来</span>
+        <h3>气头上想说的话，先写给自己</h3>
+        <p>写完存进日历，以后想翻回来就翻回来。当时到底多气、骂了什么，只有你看得见。</p>
+        <p>如果这话本来是要发给谁的，可以顺手给它选个冷静时间：5 分钟、10 分钟或者 30 分钟，到点了再决定发不发。这是个可选动作，不选就只是一条普通的心情记录。</p>
+        <p>不管选没选，这段话都不会去任何地方——<b>不气了根本没有发送功能</b>，它只会再拿给你自己看一遍。</p>
+      </div>
+      <figure class="shot">
+        <img src="assets/shot-note.png" width="480" height="1043" loading="lazy" alt="写下来：一页可以写字的心情记录，下面可以选择冷静时间">
+      </figure>
+    </div>
+
+    <div class="feature">
+      <figure class="shot">
+        <img src="assets/shot-calendar.png" width="480" height="1043" loading="lazy" alt="消气日历：这个月每天的消气记录">
+      </figure>
+      <div>
+        <span class="tag t-cal">消气日历</span>
+        <h3>记的不是你生了几次气</h3>
+        <p>是这个月你把自己拉回来了几次。87 → 24，掉了多少分，哪个动作对你最好使，都在这儿。</p>
+        <p>没有连续打卡：我们不想奖励你天天生气。</p>
+      </div>
+    </div>
+
+    <div class="feature alt">
+      <div>
+        <span class="tag t-comfort">我要被哄</span>
+        <h3>不想动，就让它哄你</h3>
+        <p>有时候你不想切也不想砸，只想有人说一句「不是你的问题」。挑一种被哄的方式，它就一路哄下去，你什么都不用做。</p>
+        <p>哄完还是气，就换一种；不气了，就关掉它去过日子。</p>
+      </div>
+      <figure class="shot">
+        <img src="assets/shot-comfort.png" width="480" height="1043" loading="lazy" alt="我要被哄：几种被哄的方式可以挑">
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="privacy-block">
+      <h2>不联网，不上传，不要账号</h2>
+      <p>没有服务器，没有登录，没有广告，没有埋点统计，没有第三方分析工具。这不是「我们承诺不看」，是它根本没有把数据发出去的能力。</p>
+      <ul>
+        <li><b>你写下的每一个字都留在这台手机上</b>，删掉 App 就跟着消失</li>
+        <li><b>不进整机备份</b>：App 给自己的存储目录打了「不进备份」的标记，换手机也不会跟过去</li>
+        <li><b>不读通讯录、相册、聊天记录，不申请定位、麦克风、摄像头</b></li>
+        <li><b>写下的每一条都能一条条彻底删掉</b>，选了「彻底删除」的内容不会被偷偷留着</li>
+      </ul>
+      <p><a href="privacy.html">完整隐私政策 →</a></p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>常见问题</h2>
+    <div class="qa">
+      <h3>我的数据会传到哪里去？</h3>
+      <p>哪儿也不去。不气了没有服务器，不联网，不需要账号。</p>
+    </div>
+    <div class="qa">
+      <h3>我写下的话会被发出去吗？</h3>
+      <p>不会。不气了没有发送功能，设了冷静时间的那些，到点了也只是再拿给你自己看一遍。</p>
+    </div>
+    <div class="qa">
+      <h3>换手机之后记录还在吗？</h3>
+      <p>不在。数据只存在原来那台设备上，也不进 iPhone 的整机备份。</p>
+    </div>
+    <div class="qa">
+      <h3>要花钱吗？</h3>
+      <p>免费，没有内购，没有订阅，没有广告。</p>
+    </div>
+    <p style="margin-top:22px"><a href="support.html">更多用法和反馈方式 →</a></p>
+  </section>
+
+  <section>
+    <div class="disclaimer">
+      <p><b>说明：</b>不气了不是心理咨询，也不是医疗服务，不做测评也不做诊断，只帮你在情绪最上头的那几十秒里找个出口。如果你需要专业帮助，请联系专业人士；如果你有伤害自己的念头，请立即联系当地的紧急服务或心理危机热线。</p>
+    </div>
+  </section>
 
   <footer>
     <p class="site-name">不气了 Unmad</p>
+    <p class="footer-links">
+      <a href="privacy.html">隐私政策</a>
+      <a href="support.html">使用与支持</a>
+      <a href="en/index.html" hreflang="en" lang="en">English</a>
+    </p>
     <p>联系：<a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></p>
     <!-- 备案号下发后，删掉本段注释的开头标记与结尾标记，让下面这段显示出来。
          占位换成工信部查询系统里【复制】的真实号码，不要手打（全角半角会导致比对失败）。
@@ -93,6 +353,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     -->
     <p>© 2026 Yuan Zhao</p>
   </footer>
+
 </div>
 </body>
 </html>

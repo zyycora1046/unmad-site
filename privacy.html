@@ -4,6 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>隐私政策 · 不气了 Unmad</title>
+<meta name="description" content="不气了（Unmad）的隐私政策：没有服务器，不联网，不需要账号，不收集任何个人信息。所有记录只存在你自己的手机上。">
+<link rel="canonical" href="https://unmad.cn/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://unmad.cn/privacy.html">
+<link rel="alternate" hreflang="en" href="https://unmad.cn/en/privacy.html">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FFF4DD">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="不气了 Unmad">
+<meta property="og:title" content="隐私政策 · 不气了 Unmad">
+<meta property="og:description" content="没有服务器，不联网，不需要账号，不收集任何个人信息。">
+<meta property="og:url" content="https://unmad.cn/privacy.html">
+<meta property="og:image" content="https://unmad.cn/assets/og.png">
+<meta property="og:locale" content="zh_CN">
 <style>
 :root {
   --cream: #FFF4DD;
@@ -11,7 +25,9 @@
   --ink: #21180F;
   --muted: #6B5B48;
   --orange: #FF9D2E;
+  --red: #EF4136;
   --line: #21180F;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 body {
@@ -22,14 +38,22 @@ body {
         "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
-.wrap { max-width: 680px; margin: 0 auto; padding: 40px 20px 72px; }
-header { margin-bottom: 32px; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 24px 20px 72px; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px; margin-bottom: 30px;
+}
 .mark {
   display: inline-block; padding: 6px 14px; border: 2.5px solid var(--line);
   border-radius: 999px; background: var(--orange); font-weight: 800; letter-spacing: .02em;
-  box-shadow: 3px 3px 0 var(--line);
+  box-shadow: 3px 3px 0 var(--line); text-decoration: none;
 }
-h1 { font-size: 28px; font-weight: 800; margin: 24px 0 6px; letter-spacing: -.01em; }
+.mark:hover { color: var(--ink); }
+.topbar nav { display: flex; gap: 18px; font-size: 14px; }
+.topbar nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+.topbar nav a:hover { color: var(--red); text-decoration: underline; }
+header.page { margin-bottom: 28px; }
+h1 { font-size: 28px; font-weight: 800; margin: 0 0 6px; letter-spacing: -.01em; }
 .sub { color: var(--muted); margin: 0; font-size: 14px; }
 main {
   background: var(--paper); border: 2.5px solid var(--line); border-radius: 18px;
@@ -41,20 +65,29 @@ p { margin: 0 0 14px; }
 ul { margin: 0 0 14px; padding-left: 22px; }
 li { margin-bottom: 6px; }
 a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-a:hover { color: var(--orange); }
+a:hover { color: var(--red); }
 hr { border: 0; border-top: 2px dashed rgba(33,24,15,.25); margin: 30px 0; }
 .en { color: var(--muted); font-size: 14px; }
+.lead {
+  background: var(--cream); border: 2px solid var(--line); border-radius: 14px;
+  padding: 16px 18px; margin: 0 0 8px;
+}
+.lead p:last-child { margin-bottom: 0; }
+.tablewrap { overflow-x: auto; margin: 0 0 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { border: 2px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--cream); font-weight: 800; }
+td.no { white-space: nowrap; font-weight: 700; }
 footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 13px; }
 footer p { margin: 0 0 6px; }
 footer p:last-child { margin-bottom: 0; }
-.site-name { font-weight: 800; color: var(--ink); }
+.footer-links { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center; }
 .beian { display: flex; flex-wrap: wrap; gap: 4px 10px; justify-content: center; }
 .beian a { color: var(--muted); text-decoration: none; }
-.beian a:hover { color: var(--orange); text-decoration: underline; }
-
+.beian a:hover { color: var(--red); text-decoration: underline; }
 code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size: .92em; }
 @media (max-width: 480px) {
-  .wrap { padding: 28px 14px 56px; }
+  .wrap { padding: 20px 14px 56px; }
   main { padding: 22px 18px; box-shadow: 4px 4px 0 var(--line); }
   h1 { font-size: 24px; }
 }
@@ -62,18 +95,40 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <span class="mark">不气了 · Unmad</span>
+
+  <header class="topbar">
+    <a class="mark" href="index.html">不气了 · Unmad</a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="support.html">使用与支持</a>
+      <a href="en/privacy.html" hreflang="en" lang="en">English</a>
+    </nav>
+  </header>
+
+  <header class="page">
     <h1>隐私政策</h1>
-    <p class="sub">最后更新：2026 年 9 月 · 适用版本 v1.0.0</p>
+    <p class="sub">生效日期：2026 年 9 月 · 最后更新：2026 年 9 月 · 适用版本 v1.0.0</p>
   </header>
 
   <main>
-    <h2>一句话版本</h2>
-    <p>不气了没有服务器，也不需要账号。你在 App 里写的、选的、玩过的，都不会离开你的手机。我们收集不到你的任何信息，因为根本没有地方可以收。</p>
+    <div class="lead">
+      <p><b>一句话版本：</b>不气了没有服务器，也不需要账号。你在 App 里写的、选的、玩过的，都不会离开你的手机。我们收集不到你的任何信息，因为根本没有地方可以收。</p>
+    </div>
+
+    <h2>谁在运营</h2>
+    <ul>
+      <li>开发者（个人信息处理者）：Yuan Zhao（个人开发者）</li>
+      <li>App 名称：不气了（Unmad）　·　标识：<code>co.unmad.app</code></li>
+      <li>联系邮箱：<a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></li>
+    </ul>
+
+    <h2>我们处理哪些个人信息</h2>
+    <p>不处理任何个人信息。不气了<b>不收集、不存储、不使用、不共享、不转让、不公开披露</b>你的任何个人信息，也不存在向境外提供个人信息的情形——因为它没有服务器，也不发起任何网络请求。</p>
+    <p>不需要注册，不需要登录，不需要手机号、邮箱、微信或任何第三方账号。打开就能用。</p>
 
     <h2>不联网，不上传</h2>
-    <p>不气了不发起任何网络请求。没有登录，没有云同步，没有广告 SDK，没有埋点统计，没有第三方分析工具。App 里没有一处会把数据发出这台设备。</p>
+    <p>不气了不发起任何网络请求。没有登录，没有云同步，没有广告 SDK，没有埋点统计，没有第三方分析工具，没有崩溃上报，没有推送。App 里没有一处会把数据发出这台设备。</p>
+    <p>它用到的第三方开源组件（React Native、Expo 的基础模块）只提供本地界面、本地存储、音效和震动，不含任何会联网上传的能力。</p>
 
     <h2>存在你本机的东西</h2>
     <ul>
@@ -81,13 +136,38 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
       <li>你写下的心情记录，以及（如果你用了可选的冷静箱）冻在里面的那些话</li>
       <li>你的版本选择、音效与震动开关等偏好</li>
     </ul>
-    <p>全部存在这台设备的本地存储（iOS 沙盒）里。不气了自己不上传、不同步、不另外备份。</p>
+    <p>全部存在这台设备的本地存储（iOS 沙盒）里。不气了自己不上传、不同步、不另外备份。这些内容我们看不到，也没有任何后台可以看到。</p>
 
     <h2>备份</h2>
     <p>不气了给自己的存储目录打了「不进备份」的标记，所以 iPhone 的整机备份（iCloud 或电脑备份）不会把这些记录带走。换手机、从备份恢复，它们都不会跟过去；不气了自己也没有留副本。</p>
 
+    <h2>系统权限与设备信息</h2>
+    <p>不气了<b>不申请任何系统权限</b>。安装后不会弹出任何权限请求。</p>
+    <div class="tablewrap"><table>
+      <tr><th>权限 / 信息</th><th>是否使用</th><th>说明</th></tr>
+      <tr><td>位置</td><td class="no">否</td><td>不申请、不读取，任何精度都没有</td></tr>
+      <tr><td>麦克风 / 录音</td><td class="no">否</td><td>只播放音效，从不录音</td></tr>
+      <tr><td>摄像头 / 相册</td><td class="no">否</td><td>不拍照、不读取、不上传图片</td></tr>
+      <tr><td>通讯录 / 通话记录 / 短信</td><td class="no">否</td><td>不读取，也没有联系人功能</td></tr>
+      <tr><td>剪贴板</td><td class="no">仅写入</td><td>只有你自己点「复制」时，把你写的那段话写进剪贴板，方便你粘到别处。<b>从不读取剪贴板内容。</b></td></tr>
+      <tr><td>通知 / 推送</td><td class="no">否</td><td>不申请通知权限，不推送消息</td></tr>
+      <tr><td>设备标识（IDFA / IMEI 等）</td><td class="no">否</td><td>不读取、不生成、不上报，不做任何广告追踪</td></tr>
+      <tr><td>应用列表 / 传感器 / 蓝牙 / Wi-Fi 信息</td><td class="no">否</td><td>不读取</td></tr>
+      <tr><td>震动</td><td class="no">是</td><td>系统震动反馈，可在「我的」里关掉，不涉及任何信息</td></tr>
+    </table></div>
+
     <h2>不碰的东西</h2>
-    <p>不读通讯录，不读相册，不读你的聊天记录，不申请定位，不使用麦克风或摄像头。你写下的话只显示给你自己看。不气了没有发送、分享或转发功能，任何一句都不会被替你发出去。</p>
+    <p>你写下的话只显示给你自己看。不气了没有发送、分享或转发功能，任何一句都不会被替你发出去。冷静箱到点之后，也只是把这段话再拿给你自己看一遍，由你决定发不发。</p>
+
+    <h2>你的权利</h2>
+    <p>因为这些内容只存在你自己的设备上，你对它们是完全控制的，不用向我们申请，也不需要我们配合：</p>
+    <ul>
+      <li><b>查阅、复制</b>：在「消气日历」里翻看每一条；需要带走某一段，可以自己复制</li>
+      <li><b>更正</b>：写下的内容可以随时编辑</li>
+      <li><b>删除</b>：见下一节，逐条删或者一次清空都行</li>
+      <li><b>撤回同意</b>：不气了不收集信息，因此没有需要撤回的授权；卸载 App 即终止一切</li>
+    </ul>
+    <p>如果你对这份政策本身有疑问或投诉，写信到 <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>，我们会在 15 个工作日内回复。</p>
 
     <h2>删除</h2>
     <ul>
@@ -98,11 +178,14 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     </ul>
     <p>选了「彻底删除」的内容不会被偷偷留着。</p>
 
-    <h2>儿童</h2>
-    <p>不气了不面向 13 岁以下儿童，也不会有意收集他们的信息。由于本 App 不收集任何数据，无论使用者是谁，都不存在需要删除的服务器端记录。</p>
+    <h2>未成年人</h2>
+    <p>不气了不面向不满 14 周岁的儿童，也不会有意收集他们的信息。由于本 App 不收集任何个人信息，无论使用者是谁，都不存在需要删除的服务器端记录。如果你是未成年人的监护人，对孩子使用本 App 有疑问，可以来信联系我们。</p>
+
+    <h2>这不是医疗服务</h2>
+    <p>不气了不做心理测评、不做诊断、不提供治疗，也不属于医疗器械或互联网诊疗服务。如果你需要专业帮助，请联系专业人士；如果你有伤害自己的念头，请立即联系当地的紧急服务或心理危机热线。</p>
 
     <h2>政策变更</h2>
-    <p>如果以后版本引入了任何会离开设备的功能，这一页和 App 内的隐私政策会在那个版本发布时同步更新，并在更新说明里写清楚。</p>
+    <p>如果以后版本引入了任何会离开设备的功能，这一页和 App 内的隐私政策会在那个版本发布时同步更新，并在更新说明里写清楚。这一页的顶部始终标着生效日期和适用版本。</p>
 
     <h2>联系</h2>
     <p>有问题写信到 <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>。</p>
@@ -110,12 +193,16 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     <hr>
 
     <h2 class="en">English</h2>
-    <p class="en">A full English version of this policy is at <a href="en/privacy.html">unmad-site/en/privacy.html</a>.</p>
-    <p class="en">Unmad (不气了) collects no data. The app has no server, no account, and makes no network requests whatsoever. Everything you write or do — rescue history, held drafts, preferences — is stored only in the app's local sandbox on your device and is deleted when you delete the app. The app does not access contacts, photos, location, microphone, or camera, and it has no sending, sharing, or messaging capability. The app marks its own storage as excluded from backup, so a full iPhone backup (iCloud or computer) does not carry this data either. Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
+    <p class="en">A full English version of this policy is at <a href="en/privacy.html" hreflang="en" lang="en">Privacy policy (English)</a>.</p>
+    <p class="en">Unmad (不气了) collects no data. The app has no server, no account, and makes no network requests whatsoever. Everything you write or do — rescue history, held drafts, preferences — is stored only in the app’s local sandbox on your device and is deleted when you delete the app. The app requests no system permissions: no contacts, photos, location, microphone, or camera, and it never reads the clipboard. It has no sending, sharing, or messaging capability. The app marks its own storage as excluded from backup, so a full iPhone backup (iCloud or computer) does not carry this data either. Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
   </main>
 
   <footer>
-    <p><a href="index.html">不气了 Unmad</a> · <a href="support.html">支持页面</a> · <a href="en/privacy.html">English</a></p>
+    <p class="footer-links">
+      <a href="index.html">不气了 Unmad</a>
+      <a href="support.html">使用与支持</a>
+      <a href="en/privacy.html" hreflang="en" lang="en">English</a>
+    </p>
     <p>联系：<a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></p>
     <!-- 备案号下发后，删掉本段注释的开头标记与结尾标记，让下面这段显示出来。
          占位换成工信部查询系统里【复制】的真实号码，不要手打（全角半角会导致比对失败）。
@@ -127,6 +214,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     -->
     <p>© 2026 Yuan Zhao</p>
   </footer>
+
 </div>
 </body>
 </html>
