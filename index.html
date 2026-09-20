@@ -75,9 +75,6 @@ h1 {
 .lede { font-size: 17px; margin: 0 0 24px; }
 .lede b { font-weight: 800; }
 .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
-/* App Store 上线后：把下面这个 <span class="store"> 换成
-   <a class="store" href="https://apps.apple.com/cn/app/idXXXXXXXXXX">App Store 下载</a>
-   样式一样，a 会自动变成可点的按钮。 */
 .store {
   display: inline-block; padding: 12px 24px; border: 2.5px solid var(--line);
   border-radius: 999px; background: var(--yellow); font-weight: 800; font-size: 16px;
@@ -193,7 +190,7 @@ footer p:last-child { margin-bottom: 0; }
       <h1>他TMD又双叒<br>惹我生气！！！</h1>
       <p class="lede">生气的时候，没人想听大道理。<b>不气了</b>不劝你「冷静一点」，也不让你写感恩日记。它只做一件事：用 30 到 90 秒把你从气头上捞回来，然后让你关掉它，回去过日子。</p>
       <div class="cta">
-        <span class="store">App Store · 即将上线</span>
+        <a class="store" href="https://apps.apple.com/cn/app/id6809241933">App Store 下载</a>
         <span class="cta-note">免费 · 无内购 · 不联网 · 不要账号</span>
       </div>
     </div>
@@ -343,13 +340,13 @@ footer p:last-child { margin-bottom: 0; }
       <a href="en/index.html" hreflang="en" lang="en">English</a>
     </p>
     <p>联系：<a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></p>
-    <!-- 备案号下发后，删掉本段注释的开头标记与结尾标记，让下面这段显示出来。
-         占位换成工信部查询系统里【复制】的真实号码，不要手打（全角半角会导致比对失败）。
-         备案号未下发前不得展示，展示未获批的号码属于违规。
+    <!-- ICP 备案号 2026-09-20 下发，已展示。号码从工信部系统复制，ICP 和数字都是半角。 -->
     <p class="beian">
-      <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">▢▢ICP备▢▢▢▢▢▢▢▢号-1</a>
-      <a href="https://beian.mps.gov.cn" target="_blank" rel="noopener">▢公网安备 ▢▢▢▢▢▢▢▢▢▢▢▢▢▢号</a>
+      <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鲁ICP备2026055416号</a>
     </p>
+    <!-- 公网安备是另一张批文（公安联网备案），ICP 下来之后才去办，下发前同样不得展示。
+         拿到之后把下面这行挪进上面那个 <p class="beian"> 里，号码同样从公安备案系统【复制】。
+      <a href="https://beian.mps.gov.cn" target="_blank" rel="noopener">▢公网安备 ▢▢▢▢▢▢▢▢▢▢▢▢▢▢号</a>
     -->
     <p>© 2026 Yuan Zhao</p>
   </footer>
