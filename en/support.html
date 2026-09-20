@@ -27,6 +27,7 @@
   --muted: #6B5B48;
   --orange: #FF9D2E;
   --red: #EF4136;
+  --yellow: #FFD84D;
   --line: #21180F;
   color-scheme: light;
 }
@@ -48,6 +49,18 @@ header { margin-bottom: 32px; }
 }
 h1 { font-size: 28px; font-weight: 800; margin: 24px 0 6px; letter-spacing: -.01em; }
 .sub { color: var(--muted); margin: 0; font-size: 14px; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0; }
+.store {
+  display: inline-block; padding: 10px 20px; border: 2.5px solid var(--line);
+  border-radius: 999px; background: var(--yellow); color: var(--ink);
+  font-weight: 800; font-size: 15px; box-shadow: 4px 4px 0 var(--line);
+  text-decoration: none;
+}
+.store:hover {
+  background: var(--orange); color: var(--ink);
+  transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--line);
+}
+.cta-note { font-size: 13px; color: var(--muted); }
 main {
   background: var(--paper); border: 2.5px solid var(--line); border-radius: 18px;
   padding: 28px 24px; box-shadow: 5px 5px 0 var(--line);
@@ -116,6 +129,13 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 
     <h2>Feedback and bug reports</h2>
     <p>Write to <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a> and include your device, your iOS version, and the app version (in “Me → About Unmad”). “Me → Feedback” inside the app opens your mail app with the same address filled in.</p>
+    <hr>
+    <!-- 这两页是说明文档，读者是来看条款和用法的，按钮放末尾不跟正文抢。
+         首页那颗在标题底下，那儿它是主角，这儿它是读完之后的出口。 -->
+    <p class="cta">
+      <a class="store" href="https://apps.apple.com/app/id6809241933">Download on the App Store</a>
+      <span class="cta-note">Free · No in-app purchases · No account · No network</span>
+    </p>
   </main>
 
   <footer>
