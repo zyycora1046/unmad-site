@@ -107,12 +107,12 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 
   <header class="page">
     <h1>隐私政策</h1>
-    <p class="sub">生效日期：2026 年 9 月 · 最后更新：2026 年 9 月 · 适用版本 v1.0.0</p>
+    <p class="sub">生效日期：2026 年 9 月 · 最后更新：2026 年 10 月 · 适用版本 v1.1.0</p>
   </header>
 
   <main>
     <div class="lead">
-      <p><b>一句话版本：</b>不气了没有服务器，也不需要账号。你在 App 里写的、选的、玩过的，都不会离开你的手机。我们收集不到你的任何信息，因为根本没有地方可以收。</p>
+      <p><b>一句话版本：</b>不气了没有服务器，也不需要账号。你在 App 里写的、选的、玩过的，除了你自己点分享发出去的，都不会离开你的手机。我们收集不到你的任何信息，因为根本没有地方可以收。</p>
     </div>
 
     <h2>谁在运营</h2>
@@ -127,27 +127,35 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     <p>不需要注册，不需要登录，不需要手机号、邮箱、微信或任何第三方账号。打开就能用。</p>
 
     <h2>不联网，不上传</h2>
-    <p>不气了不发起任何网络请求。没有登录，没有云同步，没有广告 SDK，没有埋点统计，没有第三方分析工具，没有崩溃上报，没有推送。App 里没有一处会把数据发出这台设备。</p>
-    <p>它用到的第三方开源组件（React Native、Expo 的基础模块）只提供本地界面、本地存储、音效和震动，不含任何会联网上传的能力。</p>
+    <p>不气了不发起任何网络请求。没有登录，没有云同步，没有广告 SDK，没有埋点统计，没有第三方分析工具，没有崩溃上报，没有推送。App 里没有一处会自己把数据发出这台设备。</p>
+    <p>它用到的第三方开源组件（React Native 和 Expo 的基础模块、把那一页截成图的 react-native-view-shot、调起系统评分弹窗的 expo-store-review）只用来画界面、存在本机、放音效和震动、生成你要分享的图、弹出评分，不含任何会联网上传的能力。不气了没有接入任何广告、统计、崩溃上报类的第三方 SDK。</p>
 
     <h2>存在你本机的东西</h2>
     <ul>
       <li>消气记录与冷静记录：时间、你自己报的怒气值、玩过哪些活动</li>
       <li>你写下的心情记录，以及（如果你用了可选的冷静箱）冻在里面的那些话</li>
+      <li>怒气账单：给某一轮消气补记的「犯了什么事」，和你补的那一句</li>
+      <li>「砸碎这破事」的破事库里，你写下的那几句</li>
+      <li>写到一半、还没存下的那段话</li>
+      <li>测验测出来的结果，以及没答完的那份答卷</li>
       <li>你的版本选择、音效与震动开关等偏好</li>
     </ul>
     <p>全部存在这台设备的本地存储（iOS 沙盒）里。不气了自己不上传、不同步、不另外备份。这些内容我们看不到，也没有任何后台可以看到。</p>
+
+    <h2>分享</h2>
+    <p>测验结果和怒气账单月报可以存成一张图，交给手机自己的分享面板，存进相册还是发给谁，都由你在那里决定。只有你点了那颗按钮才会生成这张图；图上只有那一页上印着的内容，<b>没有你写下的原话</b>。生成用的临时文件发完就删，不气了自己什么都不发。</p>
 
     <h2>备份</h2>
     <p>不气了给自己的存储目录打了「不进备份」的标记，所以 iPhone 的整机备份（iCloud 或电脑备份）不会把这些记录带走。换手机、从备份恢复，它们都不会跟过去；不气了自己也没有留副本。</p>
 
     <h2>系统权限与设备信息</h2>
-    <p>不气了<b>不申请任何系统权限</b>。安装后不会弹出任何权限请求。</p>
+    <p>不气了安装后<b>不会弹出任何权限请求</b>。唯一可能出现的一次，是你在分享面板里第一次点「存储图像」时，系统问能不能把这张图添加到照片——只能往里存，读不到你相册里的任何东西。</p>
     <div class="tablewrap"><table>
       <tr><th>权限 / 信息</th><th>是否使用</th><th>说明</th></tr>
       <tr><td>位置</td><td class="no">否</td><td>不申请、不读取，任何精度都没有</td></tr>
       <tr><td>麦克风 / 录音</td><td class="no">否</td><td>只播放音效，从不录音</td></tr>
-      <tr><td>摄像头 / 相册</td><td class="no">否</td><td>不拍照、不读取、不上传图片</td></tr>
+      <tr><td>摄像头</td><td class="no">否</td><td>不拍照</td></tr>
+      <tr><td>相册</td><td class="no">仅添加</td><td>只有你在分享面板里点「存储图像」时，把那张图存进去。<b>从不读取相册</b>，也不上传图片。</td></tr>
       <tr><td>通讯录 / 通话记录 / 短信</td><td class="no">否</td><td>不读取，也没有联系人功能</td></tr>
       <tr><td>剪贴板</td><td class="no">仅写入</td><td>只有你自己点「复制」时，把你写的那段话写进剪贴板，方便你粘到别处。<b>从不读取剪贴板内容。</b></td></tr>
       <tr><td>通知 / 推送</td><td class="no">否</td><td>不申请通知权限，不推送消息</td></tr>
@@ -157,7 +165,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     </table></div>
 
     <h2>不碰的东西</h2>
-    <p>你写下的话只显示给你自己看。不气了没有发送、分享或转发功能，任何一句都不会被替你发出去。冷静箱到点之后，也只是把这段话再拿给你自己看一遍，由你决定发不发。</p>
+    <p>你写下的话只显示给你自己看。不气了没有发送功能，任何一句都不会被替你发出去。能分享的只有测验结果和怒气账单月报这两张图，而且只在你自己点了之后，图上也没有你写下的原话。冷静箱到点之后，也只是把这段话再拿给你自己看一遍，由你决定发不发。</p>
 
     <h2>你的权利</h2>
     <p>因为这些内容只存在你自己的设备上，你对它们是完全控制的，不用向我们申请，也不需要我们配合：</p>
@@ -194,7 +202,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 
     <h2 class="en">English</h2>
     <p class="en">A full English version of this policy is at <a href="en/privacy.html" hreflang="en" lang="en">Privacy policy (English)</a>.</p>
-    <p class="en">Unmad (不气了) collects no data. The app has no server, no account, and makes no network requests whatsoever. Everything you write or do — rescue history, held drafts, preferences — is stored only in the app’s local sandbox on your device and is deleted when you delete the app. The app requests no system permissions: no contacts, photos, location, microphone, or camera, and it never reads the clipboard. It has no sending, sharing, or messaging capability. The app marks its own storage as excluded from backup, so a full iPhone backup (iCloud or computer) does not carry this data either. Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
+    <p class="en">Unmad (不气了) collects no data. The app has no server, no account, and makes no network requests whatsoever. Everything you write or do (rescue history, held drafts, preferences) is stored only in the app’s local sandbox on your device and is deleted when you delete the app. The app asks for no permissions when installed: no contacts, location, microphone, or camera, and it never reads the clipboard or your photos. It has no sending or messaging capability. The monthly rage receipt (and, in the Chinese version, quiz results) can be saved as an image through your phone’s share sheet, only when you tap to do so and without anything you wrote; choosing “Save Image” there asks once for add-only access to Photos. The app marks its own storage as excluded from backup, so a full iPhone backup (iCloud or computer) does not carry this data either. Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
   </main>
 
   <footer>
