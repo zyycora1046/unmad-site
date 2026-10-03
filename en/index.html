@@ -3,22 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unmad</title>
-<meta name="description" content="Unmad is a small emotional first-aid tool. 30 to 90 seconds to get out of a bad mood, then close it. No network, no account, nothing uploaded.">
+<title>Unmad: Anger Relief &amp; Vent App for iPhone</title>
+<meta name="description" content="Unmad is a free iPhone app for when you’re too mad to think. Smash it, slice it, write it down or get comforted, and get out of the rage zone in 30 to 90 seconds. No account, no network, nothing uploaded.">
 <link rel="canonical" href="https://unmad.cn/en/">
 <link rel="alternate" hreflang="en" href="https://unmad.cn/en/">
 <link rel="alternate" hreflang="zh-Hans" href="https://unmad.cn/">
+<link rel="alternate" hreflang="x-default" href="https://unmad.cn/en/">
 <link rel="icon" href="../assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <meta name="theme-color" content="#FFF4DD">
+<!-- iPhone 上的 Safari 顶部会出一条系统自带的「打开 / 获取」横幅，直通 App Store 下载页。 -->
+<meta name="apple-itunes-app" content="app-id=6809241933">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Unmad">
-<meta property="og:title" content="Unmad · Open it when you are angry">
-<meta property="og:description" content="Unmad is a small emotional first-aid tool. 30 to 90 seconds to get out of a bad mood, then close it. No network, no account, nothing uploaded.">
+<meta property="og:title" content="Unmad · Open it when you’re this mad">
+<meta property="og:description" content="Nobody wants advice when they’re this mad. Smash it, slice it, write it down, then close the app and go live your life. Free, no account, nothing uploaded.">
 <meta property="og:url" content="https://unmad.cn/en/">
 <meta property="og:image" content="https://unmad.cn/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<!-- 结构化数据：给搜索引擎和 ChatGPT 搜索读的。FAQPage 里的问答必须和页面上看得见的
+     「Questions」一节一字不差，改了那边这里跟着改，否则会被当成藏内容。
+     没写评分：美区还没有评分，不编。 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "https://unmad.cn/en/#app",
+      "name": "Unmad",
+      "alternateName": ["Unmad: Anger Relief & Vent", "不气了"],
+      "description": "A free anger-relief app for iPhone. Rate how mad you are, do one quick thing (smash it, slice it, write it down, or get comforted) and get out of the rage zone in 30 to 90 seconds. No account, no network, nothing uploaded.",
+      "operatingSystem": "iOS 15.1 or later",
+      "applicationCategory": "HealthApplication",
+      "inLanguage": ["en", "zh-Hans"],
+      "url": "https://unmad.cn/en/",
+      "installUrl": "https://apps.apple.com/app/id6809241933",
+      "sameAs": ["https://apps.apple.com/app/id6809241933"],
+      "image": "https://unmad.cn/assets/og-en.png",
+      "screenshot": "https://unmad.cn/assets/en/shot-home.webp",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Yuan Zhao" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://unmad.cn/en/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is Unmad?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A free anger-relief app for iPhone. When you’re furious, it gives you 30 to 90 seconds of something to do (smash it, slice it, write it down, or let it comfort you) so you can get out of the rage zone without anyone telling you to calm down." } },
+        { "@type": "Question", "name": "How much does it cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nothing. No in-app purchases, no subscription, no ads." } },
+        { "@type": "Question", "name": "Do I need an account or an internet connection?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. There’s no sign-up and no login, and Unmad makes no network requests at all, so it works the same in airplane mode." } },
+        { "@type": "Question", "name": "Where does my data go?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nowhere. Your log, everything you write and your settings stay on your iPhone. They’re excluded from iCloud and computer backups, and deleting the app deletes them." } },
+        { "@type": "Question", "name": "Can anything I write get sent to the person I’m mad at?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Unmad has no send button at all. Even with a cool-down timer set, all that happens when time’s up is that you get to read it again and decide for yourself." } },
+        { "@type": "Question", "name": "Is Unmad an anger management or counseling app?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. It doesn’t assess, diagnose or treat anything, and it isn’t a course or a program. It’s for the worst thirty seconds. If you need real help, please talk to a professional." } },
+        { "@type": "Question", "name": "Is there an Android version?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not right now. Unmad is iPhone only and needs iOS 15.1 or later." } },
+        { "@type": "Question", "name": "What languages is it in?",
+          "acceptedAnswer": { "@type": "Answer", "text": "English and Simplified Chinese (in Chinese it’s called 不气了). It follows your phone’s language, and you can switch it under Me." } },
+        { "@type": "Question", "name": "How do I get help or report a bug?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Email hellounmad1@gmail.com with your device, iOS version and app version (Me → About Unmad). Me → Feedback in the app opens your mail app with the address filled in." } }
+      ]
+    }
+  ]
+}
+</script>
 <style>
 :root {
   --cream: #FFF4DD;
@@ -28,97 +85,545 @@
   --orange: #FF9D2E;
   --red: #EF4136;
   --yellow: #FFD84D;
+  --lilac: #C3B0F5;
+  --pink: #FFB3C7;
+  --mint: #A8E6CF;
   --line: #21180F;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--cream);
   color: var(--ink);
-  font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
         Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
-.wrap { max-width: 680px; margin: 0 auto; padding: 40px 20px 72px; }
-header { margin-bottom: 32px; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--red); }
+.wrap { max-width: 960px; margin: 0 auto; padding: 24px 20px 72px; }
+/* 锚点跳过去的时候标题别顶着屏幕上沿 */
+section[id] { scroll-margin-top: 20px; }
+
+/* ---------- 顶栏 ---------- */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px; margin-bottom: 44px;
+}
 .mark {
   display: inline-block; padding: 6px 14px; border: 2.5px solid var(--line);
   border-radius: 999px; background: var(--orange); font-weight: 800; letter-spacing: .02em;
-  box-shadow: 3px 3px 0 var(--line);
+  box-shadow: 3px 3px 0 var(--line); text-decoration: none;
 }
-h1 { font-size: 28px; font-weight: 800; margin: 24px 0 6px; letter-spacing: -.01em; }
-.sub { color: var(--muted); margin: 0; font-size: 14px; }
-.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 18px 0 0; }
+.mark:hover { color: var(--ink); }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.topbar nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+.topbar nav a:hover { color: var(--red); text-decoration: underline; }
+
+/* ---------- 首屏 ---------- */
+.hero { display: grid; gap: 34px; align-items: center; margin-bottom: 40px; }
+.kicker {
+  margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: .08em;
+  color: var(--red); text-transform: uppercase;
+}
+h1 {
+  font-size: 44px; line-height: 1.1; font-weight: 800; margin: 0 0 18px;
+  letter-spacing: -.02em;
+}
+.lede { font-size: 18px; margin: 0 0 24px; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; }
 .store {
-  display: inline-block; padding: 10px 20px; border: 2.5px solid var(--line);
-  border-radius: 999px; background: var(--yellow); color: var(--ink);
-  font-weight: 800; font-size: 15px; box-shadow: 4px 4px 0 var(--line);
-  text-decoration: none;
+  display: inline-block; padding: 12px 24px; border: 2.5px solid var(--line);
+  border-radius: 999px; background: var(--yellow); font-weight: 800; font-size: 16px;
+  box-shadow: 4px 4px 0 var(--line); text-decoration: none; color: var(--ink);
 }
-.store:hover {
-  background: var(--orange); color: var(--ink);
-  transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--line);
-}
+a.store:hover { background: var(--orange); color: var(--ink); transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--line); }
 .cta-note { font-size: 13px; color: var(--muted); }
-main {
-  background: var(--paper); border: 2.5px solid var(--line); border-radius: 18px;
-  padding: 28px 24px; box-shadow: 5px 5px 0 var(--line);
+.shot {
+  margin: 0; border: 3px solid var(--line); border-radius: 30px; overflow: hidden;
+  box-shadow: 8px 8px 0 var(--line); background: var(--cream); line-height: 0;
+  justify-self: center; max-width: 300px;
 }
-h2 { font-size: 18px; font-weight: 800; margin: 30px 0 8px; }
-h2:first-child { margin-top: 0; }
-p { margin: 0 0 14px; }
-ul { margin: 0 0 14px; padding-left: 22px; }
-li { margin-bottom: 6px; }
-a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-a:hover { color: var(--orange); }
-hr { border: 0; border-top: 2px dashed rgba(33,24,15,.25); margin: 30px 0; }
-.alt { color: var(--muted); font-size: 14px; }
-footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 13px; }
+/* 网格子项默认 min-width:auto，截图的固有宽度会把整页撑到视口以外，
+   手机上就变成整页横向溢出。和中文首页同一个解药，别删。 */
+.hero > *, .feature > *, .row2 > * { min-width: 0; }
+.shot img { width: 100%; }
+
+/* ---------- 页内目录 ---------- */
+.toc {
+  display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 72px; padding: 0; list-style: none;
+}
+.toc a {
+  display: inline-block; padding: 6px 16px; border: 2px solid var(--line); border-radius: 999px;
+  background: var(--paper); font-weight: 700; font-size: 14px; text-decoration: none;
+}
+.toc a:hover { background: var(--orange); color: var(--ink); }
+
+/* ---------- 通用区块 ---------- */
+section { margin-bottom: 80px; }
+.eyebrow {
+  display: inline-block; margin: 0 0 10px; padding: 2px 12px; font-size: 12px; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase; border: 2px solid var(--line);
+  border-radius: 999px; background: var(--paper);
+}
+h2 { font-size: 30px; line-height: 1.2; font-weight: 800; margin: 0 0 12px; letter-spacing: -.015em; }
+.section-sub { color: var(--muted); margin: 0 0 28px; max-width: 640px; font-size: 17px; }
+.grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+.card {
+  background: var(--paper); border: 2.5px solid var(--line); border-radius: 18px;
+  padding: 22px 22px 20px; box-shadow: 5px 5px 0 var(--line);
+}
+.card h3 { margin: 0 0 6px; font-size: 19px; line-height: 1.3; font-weight: 800; }
+.card p { margin: 0; }
+.card .who { margin: 0 0 12px; font-size: 14px; color: var(--muted); }
+.card ul { margin: 0; padding-left: 20px; }
+.card li { margin-bottom: 4px; }
+
+/* What：三步 */
+.row2 { display: grid; gap: 32px; align-items: center; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 16px; }
+.steps li {
+  counter-increment: step; position: relative; padding: 18px 20px 18px 70px;
+  background: var(--paper); border: 2.5px solid var(--line); border-radius: 18px;
+  box-shadow: 5px 5px 0 var(--line);
+}
+.steps li::before {
+  content: counter(step); position: absolute; left: 18px; top: 18px;
+  width: 36px; height: 36px; border: 2.5px solid var(--line); border-radius: 50%;
+  background: var(--yellow); font-weight: 800; font-size: 17px; line-height: 31px; text-align: center;
+}
+.steps h3 { margin: 0 0 2px; font-size: 18px; font-weight: 800; }
+.steps p { margin: 0; color: var(--muted); }
+
+/* Who / When 卡片的小色头 */
+.card.c-pink { background: #FFF0F4; }
+.card.c-yellow { background: #FFF7D6; }
+.card.c-lilac { background: #F3EEFF; }
+.card.c-mint { background: #EAF8F1; }
+.moment-time {
+  display: inline-block; margin: 0 0 10px; padding: 2px 10px; font-size: 12px; font-weight: 800;
+  letter-spacing: .04em; border: 2px solid var(--line); border-radius: 999px; background: var(--orange);
+}
+
+/* Features：三条路 + 图文行 */
+.ways { margin-bottom: 64px; }
+.ways .card h3 { font-size: 20px; }
+.ways .c1 { border-top: 10px solid var(--red); }
+.ways .c2 { border-top: 10px solid #4C8DF6; }
+.ways .c3 { border-top: 10px solid var(--pink); }
+.feature { display: grid; gap: 28px; align-items: center; margin-bottom: 64px; }
+.feature:last-child { margin-bottom: 0; }
+.feature h3 { font-size: 24px; line-height: 1.25; font-weight: 800; margin: 0 0 10px; }
+.feature p { margin: 0 0 12px; }
+.feature p:last-child { margin-bottom: 0; }
+.feature .aside { color: var(--muted); }
+.tag {
+  display: inline-block; margin-bottom: 12px; padding: 3px 12px; font-size: 12px;
+  font-weight: 800; letter-spacing: .04em; border: 2px solid var(--line);
+  border-radius: 999px; background: var(--lilac);
+}
+.tag.t-note { background: var(--yellow); }
+.tag.t-comfort { background: var(--pink); }
+.tag.t-log { background: var(--mint); }
+.tag.t-receipt { background: var(--orange); }
+
+/* ---------- 隐私 ---------- */
+.privacy-block {
+  background: var(--ink); color: var(--cream); border-radius: 22px;
+  padding: 34px 30px; border: 2.5px solid var(--line); box-shadow: 6px 6px 0 var(--orange);
+}
+.privacy-block h2 { color: var(--paper); }
+.privacy-block p { color: #E8DCC6; }
+.privacy-block ul { margin: 0 0 18px; padding-left: 20px; color: #E8DCC6; }
+.privacy-block li { margin-bottom: 6px; }
+.privacy-block li b { color: var(--paper); }
+.privacy-block a { color: var(--orange); }
+.privacy-block a:hover { color: var(--yellow); }
+
+/* ---------- 常见问题 ---------- */
+.faq-list {
+  background: var(--paper); border: 2.5px solid var(--line); border-radius: 18px;
+  padding: 26px 24px; box-shadow: 5px 5px 0 var(--line);
+}
+.qa { border-top: 2px dashed rgba(33,24,15,.25); padding-top: 16px; margin-top: 16px; }
+.qa:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+.qa h3 { font-size: 17px; font-weight: 800; margin: 0 0 4px; }
+.qa p { margin: 0; color: var(--muted); }
+
+/* ---------- 收尾 ---------- */
+.closer { text-align: center; }
+.closer h2 { margin-bottom: 8px; }
+.closer .cta { justify-content: center; margin-top: 18px; }
+.disclaimer {
+  background: var(--paper); border: 2.5px dashed var(--line); border-radius: 18px;
+  padding: 22px; font-size: 14px; color: var(--muted);
+}
+.disclaimer p { margin: 0; }
+.disclaimer b { color: var(--ink); }
+footer { text-align: center; color: var(--muted); font-size: 13px; }
 footer p { margin: 0 0 6px; }
 footer p:last-child { margin-bottom: 0; }
 .site-name { font-weight: 800; color: var(--ink); }
-.beian { display: flex; flex-wrap: wrap; gap: 4px 10px; justify-content: center; }
-.beian a { color: var(--muted); text-decoration: none; }
-.beian a:hover { color: var(--orange); text-decoration: underline; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center; margin-bottom: 10px; }
 
-code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size: .92em; }
+@media (min-width: 820px) {
+  .wrap { padding: 28px 24px 80px; }
+  h1 { font-size: 64px; }
+  h2 { font-size: 34px; }
+  .hero { grid-template-columns: 1.15fr .85fr; gap: 48px; }
+  .shot { max-width: 320px; }
+  .grid.g3 { grid-template-columns: repeat(3, 1fr); }
+  .grid.g2 { grid-template-columns: repeat(2, 1fr); }
+  .row2 { grid-template-columns: 1fr 320px; gap: 44px; }
+  .feature { grid-template-columns: 320px 1fr; gap: 44px; }
+  .feature.alt { grid-template-columns: 1fr 320px; }
+  .feature.alt .shot { order: 2; }
+}
 @media (max-width: 480px) {
-  .wrap { padding: 28px 14px 56px; }
-  main { padding: 22px 18px; box-shadow: 4px 4px 0 var(--line); }
-  h1 { font-size: 24px; }
+  .wrap { padding: 20px 16px 56px; }
+  h1 { font-size: 38px; }
+  h2 { font-size: 26px; }
+  .lede { font-size: 17px; }
+  .card, .privacy-block, .faq-list, .steps li { box-shadow: 4px 4px 0 var(--line); }
+  .privacy-block { padding: 26px 20px; }
+  .faq-list { padding: 22px 18px; }
+  .toc { margin-bottom: 60px; }
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-<header>
-    <span class="mark">Unmad</span>
-    <h1>They did it AGAIN.</h1>
-    <p class="sub">Get out of a bad mood in 30 to 90 seconds, then close the app and go live your life.</p>
-    <!-- 不带 /cn/ 区码：这一页的读者在大陆以外，Apple 会按他们自己的商店跳转。 -->
-    <p class="cta">
-      <a class="store" href="https://apps.apple.com/app/id6809241933">Download on the App Store</a>
-      <span class="cta-note">Free · No in-app purchases · No account · No network</span>
-    </p>
+
+  <header class="topbar">
+    <a class="mark" href="index.html">Unmad</a>
+    <nav aria-label="Site">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="../index.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+    </nav>
   </header>
 
   <main>
-    <p>Unmad is a small emotional first-aid tool. It doesn’t lecture you about staying calm. It hands you something dumb and physical to do (slice it, smash it, pop it, throw it out) until the heat drops enough to think again.</p>
-    <ul>
-      <li>Nine things to do: Slice the Noise, Smash This Crap, Rage Bubbles, Trash That Thought, Brain Change the Channel, Look Around, Tidy Something, Tap for Merit, Take My Side</li>
-      <li>Write it down: put the thing you want to say somewhere only you can read it. If it was meant for someone else, you can freeze it for 5, 10 or 30 minutes and decide later</li>
-      <li>Cool-down log: it counts the times you pulled yourself out of it, not the times you got angry</li>
-      <li>No network, no account, nothing uploaded</li>
-    </ul>
-    <p><a href="privacy.html">Privacy policy</a> · <a href="support.html">Help &amp; support</a></p>
-    <p class="alt"><a href="../index.html">中文</a></p>
+  <section class="hero" aria-label="Unmad">
+    <div>
+      <p class="kicker">Anger relief for iPhone · 30–90 seconds</p>
+      <h1>They did it AGAIN.</h1>
+      <p class="lede">Nobody wants advice when they’re this mad. Unmad won’t tell you to calm down, and it won’t hand you a gratitude journal. It gives you something dumb and physical to do until the heat drops, then tells you to close it and go live your life.</p>
+      <!-- 不带 /cn/ 区码：这一页的读者在大陆以外，Apple 会按他们自己的商店跳转。 -->
+      <div class="cta">
+        <a class="store" href="https://apps.apple.com/app/id6809241933">Download on the App Store</a>
+        <span class="cta-note">Free · No in-app purchases · No account · No network</span>
+      </div>
+    </div>
+    <figure class="shot">
+      <img src="../assets/en/shot-home.webp" width="640" height="1391" fetchpriority="high"
+           alt="Unmad home screen: “They did it AGAIN. I’M SO DAMN DONE. Seriously.” above the buttons “I’m losing it” and “Write it down”">
+    </figure>
+  </section>
+
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#what">What it is</a></li>
+    <li><a href="#who">Who it’s for</a></li>
+    <li><a href="#when">When to open it</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+
+  <!-- ===== What ===== -->
+  <section id="what">
+    <p class="eyebrow">What</p>
+    <h2>What Unmad is</h2>
+    <p class="section-sub">Unmad is a small anger-relief app for iPhone. Not meditation, not a course, not homework. One round takes 30 to 90 seconds, and it goes like this:</p>
+    <div class="row2">
+      <ol class="steps">
+        <li>
+          <h3>Rate how mad you are</h3>
+          <p>Drag the slider. No need to be objective, go with your gut. An 87 and a 30 don’t get the same treatment.</p>
+        </li>
+        <li>
+          <h3>Do one dumb little thing</h3>
+          <p>Pick a way in: let it out, get out of your head, or just get comforted. Then smash, slice, pop, tap or dance it off.</p>
+        </li>
+        <li>
+          <h3>Rate it again</h3>
+          <p>See where you landed. Still fuming? It suggests the next thing. Better? Close the app and go live your life.</p>
+        </li>
+      </ol>
+      <figure class="shot">
+        <img src="../assets/en/shot-level.webp" width="640" height="1391" loading="lazy"
+             alt="“How mad are you now?” screen with the slider at 87 and three ways in: Let it out, Get me out of my head, Just comfort me">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== Who ===== -->
+  <section id="who">
+    <p class="eyebrow">Who</p>
+    <h2>Who it’s for</h2>
+    <p class="section-sub">Anyone who’s ever sat there shaking, phone in hand, after it happened again.</p>
+    <div class="grid g2">
+      <article class="card c-pink">
+        <h3>You just had it out with your partner</h3>
+        <p>And you’re replaying it, and every replay makes it worse.</p>
+      </article>
+      <article class="card c-yellow">
+        <h3>You’ve typed the text you shouldn’t send</h3>
+        <p>Write it here instead. Every word of it. Unmad has no send button.</p>
+      </article>
+      <article class="card c-lilac">
+        <h3>“Just breathe” makes you madder</h3>
+        <p>Same. There’s none of that in here. You get to be unreasonable for a minute.</p>
+      </article>
+      <article class="card c-mint">
+        <h3>You want it to stay private</h3>
+        <p>No account, no sign-in, no cloud. What you write is for your eyes only, on your phone only.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== When ===== -->
+  <section id="when">
+    <p class="eyebrow">When</p>
+    <h2>When to open it</h2>
+    <p class="section-sub">In the worst thirty seconds. Then close it. There are no streaks and no daily reminders, because we’re not going to reward you for being angry every day.</p>
+    <div class="grid g3">
+      <article class="card">
+        <p class="moment-time">Right after the fight</p>
+        <h3>Before you say the next thing</h3>
+        <p>Take it out on a slab instead of on them. It cracks wherever you hit it.</p>
+      </article>
+      <article class="card">
+        <p class="moment-time">Left on read</p>
+        <h3>Three hours, then “lol”</h3>
+        <p>Put it on a receipt. Over a month you’ll see if it was a one-off or the same thing every time.</p>
+      </article>
+      <article class="card">
+        <p class="moment-time">Thumb over “Send”</p>
+        <h3>Before you hit send</h3>
+        <p>Write it down and put it on ice for 5, 10 or 30 minutes. Decide when the timer’s up.</p>
+      </article>
+      <article class="card">
+        <p class="moment-time">2 a.m.</p>
+        <h3>When you can’t stop replaying it</h3>
+        <p>Change the channel. Give your brain something else to chew on until you can sleep.</p>
+      </article>
+      <article class="card">
+        <p class="moment-time">You don’t want to be reasonable</p>
+        <h3>When you just need someone on your side</h3>
+        <p>Pick a way to be comforted and it does the rest. You don’t have to do a thing.</p>
+      </article>
+      <article class="card">
+        <p class="moment-time">Better now</p>
+        <h3>When you’re done</h3>
+        <p>Close it. That’s the whole point. Go live your life.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section id="features">
+    <p class="eyebrow">Features</p>
+    <h2>What’s inside</h2>
+    <p class="section-sub">No lessons and no “what are you grateful for today.” Just a handful of small, dumb, very satisfying things.</p>
+
+    <div class="grid g3 ways">
+      <article class="card c1">
+        <h3>Let it out</h3>
+        <p class="who">When your hands need something to do</p>
+        <ul>
+          <li>Slice the Noise</li>
+          <li>Smash This Crap</li>
+          <li>Rage Bubbles</li>
+          <li>Trash That Thought</li>
+        </ul>
+      </article>
+      <article class="card c2">
+        <h3>Get me out of my head</h3>
+        <p class="who">When thinking about it makes it worse</p>
+        <ul>
+          <li>Brain, Change the Channel</li>
+          <li>Look Around</li>
+          <li>Tidy Something</li>
+          <li>Tap for Merit</li>
+        </ul>
+      </article>
+      <article class="card c3">
+        <h3>Just comfort me</h3>
+        <p class="who">When you only want someone on your side</p>
+        <ul>
+          <li>Dance It Off</li>
+          <li>Your Majesty</li>
+          <li>Not Worth It</li>
+          <li>Whatever</li>
+          <li>Unhinged Mode</li>
+          <li>I don’t want to hear from anyone</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="feature">
+      <figure class="shot">
+        <img src="../assets/en/shot-smash.webp" width="640" height="1391" loading="lazy"
+             alt="Smash This Crap: a slab that says “Read. No reply.” with cracks spreading across it">
+      </figure>
+      <div>
+        <span class="tag">Smash This Crap</span>
+        <h3>Write it down. Then smash it.</h3>
+        <p>Type the thing that’s getting to you and it turns into a slab. Tap for a normal hit; hold and let go for a heavy one. The cracks spread out from exactly where your finger landed, and the last hit blows the whole sentence apart.</p>
+        <p class="aside">Smashed. No refunds.</p>
+      </div>
+    </div>
+
+    <div class="feature alt">
+      <div>
+        <span class="tag t-note">Write it down</span>
+        <h3>Say all of it. Only you will ever see it.</h3>
+        <p>Whatever you want to call them, write it exactly as it is. It goes into your log, so you can read it back whenever you want.</p>
+        <p>If it was meant for someone, put it on ice first: 5, 10 or 30 minutes, then decide whether it still needs sending. That part’s optional. Skip it and it’s just a mood note.</p>
+        <p>Either way, the words don’t go anywhere. <b>Unmad has no send button.</b> It only ever hands them back to you.</p>
+      </div>
+      <figure class="shot">
+        <img src="../assets/en/shot-note.webp" width="640" height="1391" loading="lazy"
+             alt="Write it down: a mood note with the option to freeze it for 5, 10 or 30 minutes">
+      </figure>
+    </div>
+
+    <div class="feature">
+      <figure class="shot">
+        <img src="../assets/en/shot-comfort.webp" width="640" height="1391" loading="lazy"
+             alt="Take My Side: a comfort officer with a fan, and six ways to be comforted, starting with Dance It Off">
+      </figure>
+      <div>
+        <span class="tag t-comfort">Just comfort me</span>
+        <h3>Too tired to smash anything? Let it take your side.</h3>
+        <p>Sometimes you don’t want to do anything. You just want someone to say it’s not your fault. Pick how you want to be comforted and it keeps going, no input needed.</p>
+        <p>Get treated like royalty in Your Majesty, let your friend tell you they’re not worth it, go full Unhinged Mode, or Dance It Off to one of four songs made just for Unmad.</p>
+      </div>
+    </div>
+
+    <div class="feature alt">
+      <div>
+        <span class="tag t-log">Cool-down log</span>
+        <h3>It counts the times you pulled yourself back</h3>
+        <p>Not the times you lost it. 87 → 24, how far it dropped, which activity actually works for you: it’s all in there.</p>
+        <p>Every day you bounce back, an officer goes on duty in your log, matched to what got you there: the Smash officer if you smashed your way down, the Merit officer if Tap for Merit did it.</p>
+        <p class="aside">No streaks. Miss a day and nothing happens. That’s a good day.</p>
+      </div>
+      <figure class="shot">
+        <img src="../assets/en/shot-log.webp" width="640" height="1391" loading="lazy"
+             alt="Cool-down log: a September calendar where each day you came back down has a little officer face on it">
+      </figure>
+    </div>
+
+    <div class="feature">
+      <figure class="shot">
+        <img src="../assets/en/shot-receipt.webp" width="640" height="1391" loading="lazy"
+             alt="Monthly rage receipt: what set you off most (Left me on read, Silent treatment), when it usually hits, and how you came back down">
+      </figure>
+      <div>
+        <span class="tag t-receipt">Rage receipts</span>
+        <h3>Keep the receipts</h3>
+        <p>When a round’s done, put it on record: left me on read, dry replies, changed plans on me. Tap what they did, and add a line if you want.</p>
+        <p>Keep a few and each month gets its own receipt: what set you off most, when it usually hits, what brought you back down. Not to throw at them someday. It’s so you can see for yourself if it’s a one-off or a pattern.</p>
+        <p class="aside">Save it as an image if you want. None of your own words go on it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Privacy ===== -->
+  <section>
+    <div class="privacy-block">
+      <h2>No network. No account. Nothing uploaded.</h2>
+      <p>No servers, no login, no ads, no analytics, no third-party tracking. That’s not a promise not to look. The app simply never sends anything anywhere. Even the rage receipt image only leaves your phone if you tap share yourself.</p>
+      <ul>
+        <li><b>Everything you write stays on this phone.</b> Delete the app and it goes with it.</li>
+        <li><b>Not in your backups.</b> Unmad marks its storage as excluded from iCloud and computer backups, so it won’t follow you to a new phone either.</li>
+        <li><b>No contacts, photo library, location, microphone or camera.</b> Nothing gets read.</li>
+        <li><b>Delete anything, for real.</b> Notes and receipts go one at a time, or wipe it all from Me.</li>
+      </ul>
+      <p><a href="privacy.html">Read the full privacy policy →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <!-- 这里的问答和 <head> 里 FAQPage 的结构化数据一一对应，改一边要改另一边。 -->
+  <section id="faq">
+    <p class="eyebrow">FAQ</p>
+    <h2>Questions</h2>
+    <div class="faq-list">
+      <div class="qa">
+        <h3>What is Unmad?</h3>
+        <p>A free anger-relief app for iPhone. When you’re furious, it gives you 30 to 90 seconds of something to do (smash it, slice it, write it down, or let it comfort you) so you can get out of the rage zone without anyone telling you to calm down.</p>
+      </div>
+      <div class="qa">
+        <h3>How much does it cost?</h3>
+        <p>Nothing. No in-app purchases, no subscription, no ads.</p>
+      </div>
+      <div class="qa">
+        <h3>Do I need an account or an internet connection?</h3>
+        <p>No. There’s no sign-up and no login, and Unmad makes no network requests at all, so it works the same in airplane mode.</p>
+      </div>
+      <div class="qa">
+        <h3>Where does my data go?</h3>
+        <p>Nowhere. Your log, everything you write and your settings stay on your iPhone. They’re excluded from iCloud and computer backups, and deleting the app deletes them.</p>
+      </div>
+      <div class="qa">
+        <h3>Can anything I write get sent to the person I’m mad at?</h3>
+        <p>No. Unmad has no send button at all. Even with a cool-down timer set, all that happens when time’s up is that you get to read it again and decide for yourself.</p>
+      </div>
+      <div class="qa">
+        <h3>Is Unmad an anger management or counseling app?</h3>
+        <p>No. It doesn’t assess, diagnose or treat anything, and it isn’t a course or a program. It’s for the worst thirty seconds. If you need real help, please talk to a professional.</p>
+      </div>
+      <div class="qa">
+        <h3>Is there an Android version?</h3>
+        <p>Not right now. Unmad is iPhone only and needs iOS 15.1 or later.</p>
+      </div>
+      <div class="qa">
+        <h3>What languages is it in?</h3>
+        <p>English and Simplified Chinese (in Chinese it’s called 不气了). It follows your phone’s language, and you can switch it under Me.</p>
+      </div>
+      <div class="qa">
+        <h3>How do I get help or report a bug?</h3>
+        <p>Email <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a> with your device, iOS version and app version (Me → About Unmad). Me → Feedback in the app opens your mail app with the address filled in.</p>
+      </div>
+    </div>
+    <p style="margin-top:22px"><a href="support.html">More on how to use it →</a></p>
+  </section>
+
+  <section class="closer">
+    <h2>Next time they do it again</h2>
+    <p class="section-sub" style="margin:0 auto">Have it on your phone before you need it.</p>
+    <div class="cta">
+      <a class="store" href="https://apps.apple.com/app/id6809241933">Download on the App Store</a>
+      <span class="cta-note">Free · iPhone · iOS 15.1 or later</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="disclaimer">
+      <p><b>One note:</b> Unmad is not counseling and not a medical service. It doesn’t assess, diagnose or treat anything. It just gives you somewhere to put the worst thirty seconds. If you need professional help, please contact a professional. If you are thinking about hurting yourself, please contact your local emergency services or a crisis line right away.</p>
+    </div>
+  </section>
   </main>
 
   <footer>
     <p class="site-name">Unmad</p>
+    <p class="footer-links">
+      <a href="https://apps.apple.com/app/id6809241933">App Store</a>
+      <a href="support.html">Help &amp; support</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of use</a>
+      <a href="../index.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+    </p>
     <p>Contact: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></p>
     <p>© 2026 Yuan Zhao</p>
-  </footer></div>
+  </footer>
+
+</div>
 </body>
 </html>

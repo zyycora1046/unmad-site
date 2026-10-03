@@ -45,8 +45,9 @@ header { margin-bottom: 32px; }
 .mark {
   display: inline-block; padding: 6px 14px; border: 2.5px solid var(--line);
   border-radius: 999px; background: var(--orange); font-weight: 800; letter-spacing: .02em;
-  box-shadow: 3px 3px 0 var(--line);
+  box-shadow: 3px 3px 0 var(--line); color: var(--ink); text-decoration: none;
 }
+.mark:hover { color: var(--ink); }
 h1 { font-size: 28px; font-weight: 800; margin: 24px 0 6px; letter-spacing: -.01em; }
 .sub { color: var(--muted); margin: 0; font-size: 14px; }
 .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0; }
@@ -93,7 +94,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 <body>
 <div class="wrap">
 <header>
-    <span class="mark">Unmad</span>
+    <a class="mark" href="index.html">Unmad</a>
     <h1>Help &amp; support</h1>
     <p class="sub">30 to 90 seconds to get yourself back</p>
   </header>
@@ -143,7 +144,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
   </main>
 
   <footer>
-    <p><a href="index.html">Unmad</a> · <a href="privacy.html">Privacy policy</a> · <a href="../support.html">中文</a></p>
+    <p><a href="index.html">Unmad</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="../support.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></p>
     <p>Contact: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></p>
     <p>© 2026 Yuan Zhao</p>
   </footer></div>
