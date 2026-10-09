@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>隐私政策 · 不气了 Unmad</title>
-<meta name="description" content="不气了（Unmad）的隐私政策：没有服务器，不联网，不需要账号，不收集任何个人信息。所有记录只存在你自己的手机上。">
+<meta name="description" content="不气了（Unmad）的隐私政策：不需要账号，不收集任何个人信息。你写的字和所有记录只存在你自己的手机上，只收集认不出你是谁的匿名使用统计。">
 <link rel="canonical" href="https://unmad.cn/privacy.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://unmad.cn/privacy.html">
 <link rel="alternate" hreflang="en" href="https://unmad.cn/en/privacy.html">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="不气了 Unmad">
 <meta property="og:title" content="隐私政策 · 不气了 Unmad">
-<meta property="og:description" content="没有服务器，不联网，不需要账号，不收集任何个人信息。">
+<meta property="og:description" content="不需要账号，不收集个人信息。你写的字只存在你手机上，只收集匿名使用统计。">
 <meta property="og:url" content="https://unmad.cn/privacy.html">
 <meta property="og:image" content="https://unmad.cn/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -112,12 +112,12 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 
   <header class="page">
     <h1>隐私政策</h1>
-    <p class="sub">生效日期：2026 年 9 月 · 最后更新：2026 年 10 月 · 适用版本 v1.1.0</p>
+    <p class="sub">生效日期：2026 年 9 月 · 最后更新：2026 年 10 月 · 适用版本 v1.2.0 及更早版本</p>
   </header>
 
   <main>
     <div class="lead">
-      <p><b>一句话版本：</b>不气了没有服务器，也不需要账号。你在 App 里写的、选的、玩过的，除了你自己点分享发出去的，都不会离开你的手机。我们收集不到你的任何信息，因为根本没有地方可以收。</p>
+      <p><b>一句话版本：</b>不气了不需要账号。你在 App 里写的字、报的怒气分数、冷静箱里的话，除了你自己点分享发出去的，都不会离开你的手机。从 1.2.0 起，唯一会发出去的是每天一小包匿名的使用统计（比如「砸碎这破事开始 2 次」），不带你写的任何字，也认不出你是谁。不收集任何个人信息。</p>
     </div>
 
     <h2>谁在运营</h2>
@@ -128,12 +128,20 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     </ul>
 
     <h2>我们处理哪些个人信息</h2>
-    <p>不处理任何个人信息。不气了<b>不收集、不存储、不使用、不共享、不转让、不公开披露</b>你的任何个人信息，也不存在向境外提供个人信息的情形——因为它没有服务器，也不发起任何网络请求。</p>
+    <p>不处理个人信息。不气了<b>不收集、不存储、不使用、不共享、不转让、不公开披露</b>你的任何个人信息。下面「匿名使用统计」那一节说的次数，没有设备编号、账号或你写的内容，一包和另一包连不起来，无法识别到任何人，属于匿名化信息。这些统计存放在中国境内（阿里云北京），不存在向境外提供的情形。</p>
     <p>不需要注册，不需要登录，不需要手机号、邮箱、微信或任何第三方账号。打开就能用。</p>
 
-    <h2>不联网，不上传</h2>
-    <p>不气了不发起任何网络请求。没有登录，没有云同步，没有广告 SDK，没有埋点统计，没有第三方分析工具，没有崩溃上报，没有推送。App 里没有一处会自己把数据发出这台设备。</p>
-    <p>它用到的第三方开源组件（React Native 和 Expo 的基础模块、把那一页截成图的 react-native-view-shot、调起系统评分弹窗的 expo-store-review）只用来画界面、存在本机、放音效和震动、生成你要分享的图、弹出评分，不含任何会联网上传的能力。不气了没有接入任何广告、统计、崩溃上报类的第三方 SDK。</p>
+    <h2>你写的不上传</h2>
+    <p>没有登录，没有云同步，没有广告 SDK，没有第三方分析工具，没有崩溃上报，没有推送。你写的字、报的分数，App 不会自己发出这台设备。</p>
+    <p>它用到的第三方开源组件（React Native 和 Expo 的基础模块、把那一页截成图的 react-native-view-shot、调起系统评分弹窗的 expo-store-review）只用来画界面、存在本机、放音效和震动、生成你要分享的图、弹出评分，不含任何会联网上传的能力。不气了没有接入任何广告、统计、崩溃上报类的第三方 SDK；下面的匿名统计是不气了自己写的，只发到不气了自己的服务器。</p>
+
+    <h2>匿名使用统计</h2>
+    <p>从 1.2.0 起，为了知道大家用了哪些功能、在哪儿卡住，不气了每天会发一小包匿名的次数到自己的服务器（unmad.cn），比如「打开了 3 次，其中 1 次在晚上 11 点以后」「撕掉标签开始 2 次、做完 1 次」「打开专员图鉴 1 次」，外加日期、版本号、界面语言、默认版还是哄她版、音效和震动这几个开关开没开、大概装了多久（只分「当天、一周内、一个月内、一个月以上、1.2.0 之前就装了」几档）。1.1.0 及更早的版本不发任何东西。</p>
+    <ul>
+      <li><b>不在里面的</b>：你写的每一个字、冷静箱、怒气账单、怒气分数、设备编号、账号、广告标识符、位置。</li>
+      <li><b>服务器怎么存</b>：收到一包就加进按天的总数里，这一包本身不保留；不记录 IP 地址。所以库里只有「某天有多少台手机砸了几次」这种合计，找不回任何一台手机。</li>
+      <li><b>什么时候发</b>：当天攒着，第二天第一次打开时发走；没网就留着下次再发，最多留两周。「清除全部本地数据」会把还没发走的一起删掉。</li>
+    </ul>
 
     <h2>存在你本机的东西</h2>
     <ul>
@@ -143,12 +151,14 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
       <li>「砸碎这破事」的破事库里，你写下的那几句</li>
       <li>写到一半、还没存下的那段话</li>
       <li>测验测出来的结果，以及没答完的那份答卷</li>
+      <li>哪几天点过「今天没人惹我」，撞见过哪些隐藏款</li>
       <li>你的版本选择、音效与震动开关等偏好</li>
+      <li>还没发走的匿名使用次数（见上一节）</li>
     </ul>
-    <p>全部存在这台设备的本地存储（iOS 沙盒）里。不气了自己不上传、不同步、不另外备份。这些内容我们看不到，也没有任何后台可以看到。</p>
+    <p>全部存在这台设备的本地存储（iOS 沙盒）里，不同步、不另外备份；你的记录和写下的字也不上传。这些内容我们看不到，也没有任何后台可以看到。</p>
 
     <h2>分享</h2>
-    <p>测验结果和怒气账单月报可以存成一张图，交给手机自己的分享面板，存进相册还是发给谁，都由你在那里决定。只有你点了那颗按钮才会生成这张图；图上只有那一页上印着的内容，<b>没有你写下的原话</b>。生成用的临时文件发完就删，不气了自己什么都不发。</p>
+    <p>测验结果、怒气账单月报和月底奖状可以存成一张图，交给手机自己的分享面板，存进相册还是发给谁，都由你在那里决定。只有你点了那颗按钮才会生成这张图；图上只有那一页上印着的内容，<b>没有你写下的原话</b>。生成用的临时文件发完就删，不气了自己什么都不发。</p>
 
     <h2>备份</h2>
     <p>不气了给自己的存储目录打了「不进备份」的标记，所以 iPhone 的整机备份（iCloud 或电脑备份）不会把这些记录带走。换手机、从备份恢复，它们都不会跟过去；不气了自己也没有留副本。</p>
@@ -170,7 +180,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     </table></div>
 
     <h2>不碰的东西</h2>
-    <p>你写下的话只显示给你自己看。不气了没有发送功能，任何一句都不会被替你发出去。能分享的只有测验结果和怒气账单月报这两张图，而且只在你自己点了之后，图上也没有你写下的原话。冷静箱到点之后，也只是把这段话再拿给你自己看一遍，由你决定发不发。</p>
+    <p>你写下的话只显示给你自己看。不气了没有发送功能，任何一句都不会被替你发出去。能分享的只有测验结果、怒气账单月报和月底奖状这几张图，而且只在你自己点了之后，图上也没有你写下的原话。冷静箱到点之后，也只是把这段话再拿给你自己看一遍，由你决定发不发。</p>
 
     <h2>你的权利</h2>
     <p>因为这些内容只存在你自己的设备上，你对它们是完全控制的，不用向我们申请，也不需要我们配合：</p>
@@ -178,7 +188,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
       <li><b>查阅、复制</b>：在「消气日历」里翻看每一条；需要带走某一段，可以自己复制</li>
       <li><b>更正</b>：写下的内容可以随时编辑</li>
       <li><b>删除</b>：见下一节，逐条删或者一次清空都行</li>
-      <li><b>撤回同意</b>：不气了不收集信息，因此没有需要撤回的授权；卸载 App 即终止一切</li>
+      <li><b>撤回同意</b>：不气了不收集个人信息，没有需要你授权或撤回的东西。匿名使用统计认不出是谁的，没法、也不需要按人删除；删掉 App 就不再发送</li>
     </ul>
     <p>如果你对这份政策本身有疑问或投诉，写信到 <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>，我们会在 15 个工作日内回复。</p>
 
@@ -192,13 +202,13 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     <p>选了「彻底删除」的内容不会被偷偷留着。</p>
 
     <h2>未成年人</h2>
-    <p>不气了不面向不满 14 周岁的儿童，也不会有意收集他们的信息。由于本 App 不收集任何个人信息，无论使用者是谁，都不存在需要删除的服务器端记录。如果你是未成年人的监护人，对孩子使用本 App 有疑问，可以来信联系我们。</p>
+    <p>不气了不面向不满 14 周岁的儿童，也不会有意收集他们的信息。由于本 App 不收集任何个人信息，服务器上只有认不出任何人的合计，无论使用者是谁，都不存在需要按人删除的记录。如果你是未成年人的监护人，对孩子使用本 App 有疑问，可以来信联系我们。</p>
 
     <h2>这不是医疗服务</h2>
     <p>不气了不做心理测评、不做诊断、不提供治疗，也不属于医疗器械或互联网诊疗服务。如果你需要专业帮助，请联系专业人士；如果你有伤害自己的念头，请立即联系当地的紧急服务或心理危机热线。</p>
 
     <h2>政策变更</h2>
-    <p>如果以后版本引入了任何会离开设备的功能，这一页和 App 内的隐私政策会在那个版本发布时同步更新，并在更新说明里写清楚。这一页的顶部始终标着生效日期和适用版本。</p>
+    <p>以后的版本如果改变了会离开设备的东西，这一页会在那个版本发布时同步更新。这一页的顶部始终标着生效日期和适用版本。</p>
 
     <h2>联系</h2>
     <p>有问题写信到 <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>。</p>
@@ -207,7 +217,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 
     <h2 class="en">English</h2>
     <p class="en">A full English version of this policy is at <a href="en/privacy.html" hreflang="en" lang="en">Privacy policy (English)</a>.</p>
-    <p class="en">Unmad (不气了) collects no data. The app has no server, no account, and makes no network requests whatsoever. Everything you write or do (rescue history, held drafts, preferences) is stored only in the app’s local sandbox on your device and is deleted when you delete the app. The app asks for no permissions when installed: no contacts, location, microphone, or camera, and it never reads the clipboard or your photos. It has no sending or messaging capability. The monthly rage receipt (and, in the Chinese version, quiz results) can be saved as an image through your phone’s share sheet, only when you tap to do so and without anything you wrote; choosing “Save Image” there asks once for add-only access to Photos. The app marks its own storage as excluded from backup, so a full iPhone backup (iCloud or computer) does not carry this data either. Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
+    <p class="en">Unmad (不气了) collects no personal information and needs no account. Everything you write or do (rescue history, held drafts, preferences) is stored only in the app’s local sandbox on your device and is deleted when you delete the app. Starting with version 1.2.0, the app sends one small daily batch of anonymous usage counts (no device ID, no account, nothing you wrote) to its own server at unmad.cn, which keeps only daily totals and does not log IP addresses. The app asks for no permissions when installed: no contacts, location, microphone, or camera, and it never reads the clipboard or your photos. It has no sending or messaging capability. Quiz results, the monthly rage receipt and the month-end award can be saved as an image through your phone’s share sheet, only when you tap to do so and without anything you wrote; choosing “Save Image” there asks once for add-only access to Photos. The app marks its own storage as excluded from backup, so a full iPhone backup (iCloud or computer) does not carry this data either. Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
   </main>
 
   <footer>

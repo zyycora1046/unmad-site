@@ -47,13 +47,13 @@
       'A little reassurance, a little nonsense, a little dance break. Or quiet company, if that’s all you want.'
     ]),
     modeList: pick([
-      ['切掉烦恼', '砸碎这破事', '怒气泡泡', '扔掉这个念头'],
-      ['脑子换个台', '找找看', '整理一下', '敲木鱼'],
+      ['切掉烦恼', '砸碎这破事', '怒气泡泡', '扔掉这个念头', '撕掉标签'],
+      ['脑子换个台', '找找看', '整理一下', '敲木鱼', '捏团子'],
       ['娘娘息怒', '不值得', '管他呢', '给我蹦迪']
     ], [
-      ['Slice It', 'Smash It', 'Rage Bubbles', 'Bin That Thought'],
-      ['Switch Channels', 'Find Something', 'Tidy Up', 'Tap the Fish'],
-      ['Royal Treatment', 'Not Worth It', 'Whatever', 'Dance Break']
+      ['Slice the Noise', 'Smash This Crap', 'Rage Bubbles', 'Bin That Thought', 'Rip the Labels'],
+      ['Brain, Change the Channel', 'Look Around', 'Tidy Something', 'Tap for Merit', 'Squish It'],
+      ['Your Majesty', 'Not Worth It', 'Whatever', 'Dance It Off']
     ]),
     demo: pick('网页小试玩', 'A little website demo'),
     demoNote: pick('演示数字随点击变化，不代表实际消气效果。', 'Demo numbers respond to clicks; they aren’t a measure of real relief.'),
@@ -65,7 +65,7 @@
     again: pick('再来一块 ↻', 'Smash another ↻'),
     counter: pick('试玩进度', 'Demo progress'),
     privacyTitle: pick('你写的话，只留给你。', 'Your words are yours.'),
-    privacyBody: pick('没有账号，不需要联网。心情记录和冷静箱留在你的手机里，想说的话也不会发给任何人。', 'No account. No internet needed. Your notes and cool-down drafts stay on your phone. There’s no send button.'),
+    privacyBody: pick('没有账号。心情记录和冷静箱留在你的手机里，你写的字不上传，想说的话也不会发给任何人。', 'No account. Your notes and cool-down drafts stay on your phone, and nothing you write gets uploaded. There’s no send button.'),
     privacyLink: pick('看看隐私说明 ↗', 'Read the privacy policy ↗'),
     noteTitle: pick('气头上的话，先写给自己。', 'Write it now. Decide later.'),
     noteBody: pick('可以顺手放进冷静箱。5、10、30 分钟，到点了，再决定。', 'Give that draft 5, 10, or 30 minutes. Read it again, then decide.'),
@@ -73,13 +73,13 @@
     faq: pick([
       ['不气了是什么？', '一款免费的 iPhone 消气 App。吵完架、气头上，玩一个 30 到 90 秒的发泄解压小游戏，或者把想说的话先写下来，先别发。'],
       ['是免费的吗？', '核心功能免费使用，无广告、无订阅。'],
-      ['一定要注册才能用吗？', '不用。没有账号，也不需要联网，打开就能用。'],
+      ['一定要注册才能用吗？', '不用。没有账号，打开就能用，断网也能玩。'],
       ['我写的话会发给他吗？', '不会。不气了没有发送功能，冷静箱到点也只会把这段话再拿给你看。'],
       ['有安卓版吗？', '目前是 iPhone App。中英文都可以在 App 内切换。']
     ], [
       ['What is Unmad?', 'A free anger relief app for iPhone. Quick venting and stress relief games for when you’re too mad to think, plus a place to write it all down instead of hitting send.'],
       ['Is it free?', 'The core features are free, with no ads or subscription.'],
-      ['Do I need an account?', 'No sign-up, no login, and no internet connection needed. Just open it.'],
+      ['Do I need an account?', 'No sign-up, no login. Just open it. It works offline too.'],
       ['Can my draft get sent to anyone?', 'No. Unmad has no send button. When a cool-down ends, you simply get to read your draft again.'],
       ['Is there an Android version?', 'It’s an iPhone app for now. You can switch between English and Simplified Chinese in the app.']
     ]),
@@ -127,15 +127,15 @@
     ${published ? '' : `<div class="proposal-bar"><a href="index.html?lang=${lang}${aligned ? '&skin=ink' : ''}">← ${pick('三套方案', 'All three concepts')}</a><span>${t.names[idx]} <i>·</i> ${aligned ? pick('新版 App 风格', 'CURRENT APP STYLE') : pick('设计预览', 'Design preview')}</span><button id="motion" aria-pressed="${!reduced}">${pick('动效', 'Motion')} ${reduced ? 'OFF' : 'ON'}</button></div>`}
     <header class="site-header wrap"><a class="brand" href="#top">${en ? aligned ? '<strong>UN<span class="brand-red">MAD</span></strong>' : '<strong>Unmad</strong>' : `<img src="${assetBase}wordmark.png${assetVersion}" alt="不气了"><span>UNMAD</span>`}</a><nav aria-label="${pick('网站导航', 'Site navigation')}"><a href="#how">${t.nav[0]}</a><a href="#privacy">${t.nav[1]}</a><a href="#faq">${t.nav[2]}</a></nav><div class="header-actions"><a class="language" href="${languageLink}" hreflang="${en ? 'zh-Hans' : 'en'}" lang="${en ? 'zh-Hans' : 'en'}">${en ? '中文' : 'EN'} <span>↗</span></a><a class="nav-download" href="${store}" target="_blank" rel="noopener">${pick('获取 App', 'Get the app')} ↗</a></div></header>
     <main id="top">${hero}
-    <div class="facts wrap"><div><strong>30–90<span>s</span></strong><p>${t.pause}</p></div><div><strong>9</strong><p>${t.games}</p></div><div><strong>${pick('只在本地', 'On-device')}</strong><p>${t.local}</p></div><div class="facts-caption"><span>LESS RAGE.<br>MORE LIFE.</span><i>↘</i></div></div>
+    <div class="facts wrap"><div><strong>30–90<span>s</span></strong><p>${t.pause}</p></div><div><strong>10</strong><p>${t.games}</p></div><div><strong>${pick('只在本地', 'On-device')}</strong><p>${t.local}</p></div><div class="facts-caption"><span>LESS RAGE.<br>MORE LIFE.</span><i>↘</i></div></div>
     <section id="how" class="feature-section wrap section"><div class="section-head"><div><p class="eyebrow">01 / ${pick('一件小事，三种方向', 'ONE SMALL THING, THREE WAYS')}</p><h2>${t.sectionTitle}</h2></div><p>${t.sectionSub}</p></div>
       <div class="feature-layout"><div class="feature-copy"><div class="mode-tabs" role="tablist" aria-label="${pick('消气方向', 'Ways to reset')}">${t.modes.map((m, i) => `<button id="mode-${i}" role="tab" aria-controls="mode-panel" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-mode="${i}"><span>0${i + 1}</span>${m}<i>↗</i></button>`).join('')}</div><div id="mode-panel" role="tabpanel" aria-labelledby="mode-0" tabindex="0"><h3 id="mode-title">${t.modeTitles[0]}</h3><p id="mode-body">${t.modeBody[0]}</p><div id="mode-list" class="activity-pills">${t.modeList[0].map(x => `<span>${x}</span>`).join('')}</div></div><a class="text-link" href="#try">${t.trial} ↗</a></div><div class="feature-art"><div class="feature-shape"></div>${phone('smash', 'feature-phone')}<span class="feature-label">${pick('实际 App 界面', 'ACTUAL APP SCREEN')}</span></div></div>
     </section>
     <section id="try" class="try-section wrap section"><div class="section-head"><div><p class="eyebrow">02 / ${pick('手上先有点动作', 'PUT YOUR HANDS TO WORK')}</p><h2>${t.bubbleTitle}</h2></div><button id="refill" class="outline-button">${pick('换一盘气泡 ↻', 'Fresh bubbles ↻')}</button></div><div class="bubble-demo"><div class="bubble-copy"><span class="pill-label">${t.demo}</span><h3>${t.bubbleHint}</h3><p class="bubble-response" aria-live="polite">${pick('点右边任意一颗，试试手感。', 'Tap any bubble. See how it feels.')}</p>${score}<p class="demo-disclaimer">${t.demoNote}</p></div>${bubbles()}</div></section>
-    <section class="small-features wrap section"><article class="note-card"><div class="small-icon">✎</div><p class="eyebrow">${pick('写下来 · 先别发', 'WRITE IT DOWN · DON’T SEND IT')}</p><h3>${t.noteTitle}</h3><p>${t.noteBody}</p><div class="timer-options" role="group" aria-label="${pick('冷静时间演示', 'Cool-down preview')}">${[5, 10, 30].map(n => `<button data-minutes="${n}" aria-pressed="${n === 5}">${n} ${pick('分钟', 'min')}</button>`).join('')}</div><div class="timer-message" aria-live="polite">${pick('先替你收着 5 分钟。', 'We’ll hold it for 5 minutes.')}</div></article><article class="privacy-card" id="privacy"><div class="small-icon">⌑</div><p class="eyebrow">${pick('隐私 · 从一开始就这样', 'PRIVATE, FROM THE START')}</p><h3>${t.privacyTitle}</h3><p>${t.privacyBody}</p><div class="privacy-tags"><span>${pick('不用注册', 'No sign-up')}</span><span>${pick('不用联网', 'Works offline')}</span><span>${pick('没有发送按钮', 'No send button')}</span></div><a class="text-link" href="${policy}" target="_blank" rel="noopener">${t.privacyLink}</a></article></section>
+    <section class="small-features wrap section"><article class="note-card"><div class="small-icon">✎</div><p class="eyebrow">${pick('写下来 · 先别发', 'WRITE IT DOWN · DON’T SEND IT')}</p><h3>${t.noteTitle}</h3><p>${t.noteBody}</p><div class="timer-options" role="group" aria-label="${pick('冷静时间演示', 'Cool-down preview')}">${[5, 10, 30].map(n => `<button data-minutes="${n}" aria-pressed="${n === 5}">${n} ${pick('分钟', 'min')}</button>`).join('')}</div><div class="timer-message" aria-live="polite">${pick('先替你收着 5 分钟。', 'We’ll hold it for 5 minutes.')}</div></article><article class="privacy-card" id="privacy"><div class="small-icon">⌑</div><p class="eyebrow">${pick('隐私 · 从一开始就这样', 'PRIVATE, FROM THE START')}</p><h3>${t.privacyTitle}</h3><p>${t.privacyBody}</p><div class="privacy-tags"><span>${pick('不用注册', 'No sign-up')}</span><span>${pick('断网也能用', 'Works offline')}</span><span>${pick('没有发送按钮', 'No send button')}</span></div><a class="text-link" href="${policy}" target="_blank" rel="noopener">${t.privacyLink}</a></article></section>
     <section class="faq-section wrap section" id="faq"><div><p class="eyebrow">03 / FAQ</p><h2>${t.faqTitle}</h2></div><div class="faq-items">${t.faq.map(([q, a]) => `<details><summary>${q}<span>+</span></summary><p>${a}</p></details>`).join('')}</div></section>
     <section class="closing wrap section">${face()}<h2>${t.closeTitle}</h2><p>${t.closeBody}</p>${download()}</section>
-    </main><footer class="wrap"><div class="footer-brand"><span>© 2026 Unmad · 不气了</span>${published ? `<p><a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></p>${en ? '' : '<p class="beian"><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鲁ICP备2026055416号-2</a></p>'}` : ''}</div><div class="footer-links"><a href="${policy}" target="_blank" rel="noopener">${t.nav[1]}</a><a href="${support}" target="_blank" rel="noopener">${pick('联系与支持', 'Support')}</a>${published ? `<a href="terms.html">${pick('使用条款', 'Terms')}</a><button id="motion" type="button" aria-pressed="${!reduced}">${pick('动效', 'Motion')} ${reduced ? 'OFF' : 'ON'}</button>` : `<a href="index.html?lang=${lang}${aligned ? '&skin=ink' : ''}">${pick('返回方案总览', 'Back to concepts')} ↗</a>`}</div></footer><div id="toast" role="status"></div>`;
+    </main><footer class="wrap"><div class="footer-brand"><span>© 2026 Unmad · 不气了</span>${published ? `<p><a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a></p>${en ? '' : '<p class="beian"><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鲁ICP备2026055416号-2</a></p>'}` : ''}</div><div class="footer-links">${published ? `<a href="features.html">${pick('玩法', 'Games')}</a><a href="changelog.html">${pick('更新记录', 'What’s new')}</a>` : ''}<a href="${policy}" target="_blank" rel="noopener">${t.nav[1]}</a><a href="${support}" target="_blank" rel="noopener">${pick('联系与支持', 'Support')}</a>${published ? `<a href="terms.html">${pick('使用条款', 'Terms')}</a><button id="motion" type="button" aria-pressed="${!reduced}">${pick('动效', 'Motion')} ${reduced ? 'OFF' : 'ON'}</button>` : `<a href="index.html?lang=${lang}${aligned ? '&skin=ink' : ''}">${pick('返回方案总览', 'Back to concepts')} ↗</a>`}</div></footer><div id="toast" role="status"></div>`;
 
   // Use native anchors, buttons and details; every product interaction works on touch and keyboard.
   let motion = !reduced;

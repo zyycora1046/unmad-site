@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy · Unmad</title>
-<meta name="description" content="Unmad has no server, no account and makes no network requests. Nothing you write leaves your phone.">
+<meta name="description" content="No account, no personal data. Nothing you write leaves your phone. The only thing collected is anonymous usage stats.">
 <link rel="canonical" href="https://unmad.cn/en/privacy.html">
 <link rel="alternate" hreflang="en" href="https://unmad.cn/en/privacy.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://unmad.cn/privacy.html">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Unmad">
 <meta property="og:title" content="Privacy Policy · Unmad">
-<meta property="og:description" content="Unmad has no server, no account and makes no network requests. Nothing you write leaves your phone.">
+<meta property="og:description" content="No account, no personal data. Nothing you write leaves your phone. The only thing collected is anonymous usage stats.">
 <meta property="og:url" content="https://unmad.cn/en/privacy.html">
 <meta property="og:image" content="https://unmad.cn/assets/og-en.png">
 <meta property="og:image:width" content="1200">
@@ -100,15 +100,23 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
 <header>
     <a class="mark" href="./">Unmad</a>
     <h1>Privacy policy</h1>
-    <p class="sub">Last updated October 2026 · applies to v1.1.0</p>
+    <p class="sub">Last updated October 2026 · applies to v1.2.0 and earlier</p>
   </header>
 
   <main>
     <h2>The one-line version</h2>
-    <p>Unmad has no server and needs no account. Nothing you write, choose, or play in the app leaves your phone unless you tap share yourself. We cannot collect anything about you, because there is nowhere for it to go.</p>
+    <p>Unmad needs no account and collects no personal information. Nothing you write or report in the app leaves your phone unless you tap share yourself. Starting with 1.2.0, the one thing it sends is a small daily batch of anonymous usage stats (like “Smash This Crap: started 2”). No words, no device ID, nothing that points back to you.</p>
 
-    <h2>No network. No upload.</h2>
-    <p>Unmad makes no network requests at all. No sign-in, no cloud sync, no ad SDK, no analytics, no third-party tracking. There is no place in the app that sends data off this device on its own.</p>
+    <h2>Nothing you write gets uploaded</h2>
+    <p>No sign-in, no cloud sync, no ad SDK, no third-party analytics, no third-party tracking, no crash reporting, no push. Nothing you write or report leaves this device on its own.</p>
+
+    <h2>Anonymous usage stats</h2>
+    <p>Starting with 1.2.0, to see which features people actually use and where they get stuck, Unmad sends one small batch of counts a day to its own server (unmad.cn, hosted in Beijing, China): things like “opened 3 times, once after 11 pm” or “Rip the Labels: started 2, finished 1,” plus the date, app version, language, whether switches like sound and vibration are on, and roughly how long ago the app was installed (today, this week, this month, longer, or before 1.2.0). Version 1.1.0 and earlier send nothing.</p>
+    <ul>
+      <li><b>Not in it:</b> anything you write, your cool-down box, your rage receipts, your anger levels, any device ID, account, ad identifier or location.</li>
+      <li><b>On the server:</b> each batch is added to daily totals and then thrown away. IP addresses aren’t logged. All that’s left is totals like “this many phones smashed something on Oct 9,” with no way to pick out one phone.</li>
+      <li><b>When it’s sent:</b> the day after, the first time you open the app. If you’re offline it waits, for up to two weeks. “Erase all local data” deletes anything not sent yet.</li>
+    </ul>
 
     <h2>What’s stored here</h2>
     <ul>
@@ -117,19 +125,21 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
       <li>Your rage receipts: what they did that round, and the line you added</li>
       <li>The lines you put on the pile in Smash This Crap</li>
       <li>Anything you were halfway through writing and hadn’t saved yet</li>
-      <li>In the Chinese version: your quiz results, and any quiz you left halfway</li>
+      <li>Your quiz results, and any quiz you left halfway</li>
+      <li>The days you tapped “No drama today,” and the secrets you’ve found</li>
       <li>Your preferences: language, sound, vibration, and (in the Chinese version) which home screen you use</li>
+      <li>Usage counts that haven’t been sent yet (see above)</li>
     </ul>
-    <p>All of it lives in this device’s local storage (the iOS sandbox). Unmad does not upload it, sync it, or back it up anywhere else.</p>
+    <p>All of it lives in this device’s local storage (the iOS sandbox). Unmad doesn’t sync it or back it up anywhere else, and your records and writing never get uploaded.</p>
 
     <h2>Sharing</h2>
-    <p>The monthly rage receipt (and, in the Chinese version, quiz results) can be saved as an image and handed to your phone’s own share sheet, where you decide whether to save it to Photos or send it to someone. The image is made only when you tap that button and carries only what is printed on that screen, <b>none of your own words</b>. Its temporary file is deleted once you are done, and Unmad itself sends nothing. The first time you choose “Save Image” there, iOS asks once for add-only access to Photos; Unmad can never read your library.</p>
+    <p>Quiz results, the monthly rage receipt and the month-end award can be saved as an image and handed to your phone’s own share sheet, where you decide whether to save it to Photos or send it to someone. The image is made only when you tap that button and carries only what is printed on that screen, <b>none of your own words</b>. Its temporary file is deleted once you are done, and Unmad itself sends nothing. The first time you choose “Save Image” there, iOS asks once for add-only access to Photos; Unmad can never read your library.</p>
 
     <h2>Backups</h2>
     <p>Unmad marks its own storage folder as excluded from backup, so a full iPhone backup (iCloud or a computer) does not carry these records. Switch phones or restore from a backup and they don’t come across. Unmad keeps no copy of them either.</p>
 
     <h2>What it never touches</h2>
-    <p>No contacts, no reading your photos, no messages, no location, no microphone, no camera. What you write is shown only to you. Unmad has no send function, so not a single line gets sent on your behalf. The only things you can share are the two images above, only when you tap to share them, and neither carries anything you wrote.</p>
+    <p>No contacts, no reading your photos, no messages, no location, no microphone, no camera. What you write is shown only to you. Unmad has no send function, so not a single line gets sent on your behalf. The only things you can share are the images above, only when you tap to share them, and neither carries anything you wrote.</p>
 
     <h2>Deleting</h2>
     <ul>
@@ -141,13 +151,13 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
     <p>Anything you chose to delete for good is not quietly kept.</p>
 
     <h2>Children</h2>
-    <p>Unmad is not directed at children under 13 and does not knowingly collect their information. Since the app collects no data at all, there are no server-side records to delete, whoever is using it.</p>
+    <p>Unmad is not directed at children under 13 and does not knowingly collect their information. The only thing on the server is anonymous totals that can’t be traced to anyone, so there are no per-person records to delete, whoever is using it.</p>
 
     <h2>Not a medical service</h2>
     <p>Unmad does not assess, diagnose, or treat anything, and it is not counseling. If you need professional help, please contact a professional. If you are thinking about hurting yourself, please contact your local emergency services or a crisis line right away.</p>
 
     <h2>Changes to this policy</h2>
-    <p>If a future version ever adds something that leaves the device, this page and the in-app privacy policy will be updated in that same release, and the release notes will say so.</p>
+    <p>If a future version changes what leaves the device, this page will be updated in that same release.</p>
 
     <h2>Contact</h2>
     <p>Questions: <a href="mailto:hellounmad1@gmail.com">hellounmad1@gmail.com</a>.</p>
@@ -156,7 +166,7 @@ code { background: var(--cream); padding: 2px 6px; border-radius: 5px; font-size
          首页那颗在标题底下，那儿它是主角，这儿它是读完之后的出口。 -->
     <p class="cta">
       <a class="store" href="https://apps.apple.com/app/id6809241933">Download on the App Store</a>
-      <span class="cta-note">Free · No in-app purchases · No account · No network</span>
+      <span class="cta-note">Free · No in-app purchases · No account · Your words stay on your phone</span>
     </p>
   </main>
 
