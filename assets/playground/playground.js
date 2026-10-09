@@ -25,7 +25,7 @@
       'Too mad to think? Put your hands to work.<br>No download needed to try this little smash.',
       'You don’t have to talk it through right now.<br>Let it out, switch gears, or let us keep you company.'
     ]),
-    tag: pick(['给气头上的你，一个小出口', '情绪急救 · 可以先玩再下载', '生气的时候，也有人站你这边'], ['A SMALL APP FOR BIG FEELINGS', 'ANGER RELIEF · TRY A LITTLE FIRST', 'A LITTLE HELP WHEN YOU’RE A LOT MAD']),
+    tag: pick(['给气头上的你，一个小出口', '消气小游戏 · 可以先玩再下载', '生气的时候，也有人站你这边'], ['A SMALL APP FOR BIG FEELINGS', 'ANGER RELIEF · TRY A LITTLE FIRST', 'A LITTLE HELP WHEN YOU’RE A LOT MAD']),
     download: pick('App Store 免费下载', 'Get Unmad for iPhone'),
     trial: pick('先在这里玩一下', 'Try a little here'),
     nav: pick(['怎么玩', '关于隐私', '常见问题'], ['How it works', 'Privacy', 'Questions']),
@@ -71,11 +71,13 @@
     noteBody: pick('可以顺手放进冷静箱。5、10、30 分钟，到点了，再决定。', 'Give that draft 5, 10, or 30 minutes. Read it again, then decide.'),
     faqTitle: pick('你可能还想知道', 'A few things you might wonder'),
     faq: pick([
+      ['不气了是什么？', '一款免费的 iPhone 消气 App。吵完架、气头上，玩一个 30 到 90 秒的发泄解压小游戏，或者把想说的话先写下来，先别发。'],
       ['是免费的吗？', '核心功能免费使用，无广告、无订阅。'],
       ['一定要注册才能用吗？', '不用。没有账号，也不需要联网，打开就能用。'],
       ['我写的话会发给他吗？', '不会。不气了没有发送功能，冷静箱到点也只会把这段话再拿给你看。'],
       ['有安卓版吗？', '目前是 iPhone App。中英文都可以在 App 内切换。']
     ], [
+      ['What is Unmad?', 'A free anger relief app for iPhone. Quick venting and stress relief games for when you’re too mad to think, plus a place to write it all down instead of hitting send.'],
       ['Is it free?', 'The core features are free, with no ads or subscription.'],
       ['Do I need an account?', 'No sign-up, no login, and no internet connection needed. Just open it.'],
       ['Can my draft get sent to anyone?', 'No. Unmad has no send button. When a cool-down ends, you simply get to read your draft again.'],
